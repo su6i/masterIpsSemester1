@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>Formulaire d'inscription'</title>
+        <meta charset="UTF-8">
+        <script type="text/javascript" src="formulaire_inscription.js"></script>
+    </head>
+    <body>
+        <h1>Inscription au site (si vous n'avez pas encore de compte)</h1>
+        <form method="post" action="inscription.php">
+            <p>
+                <label for="email">Adresse email : </label>
+                <br>
+                <input name="adresse_email" type="email" id="email" required>
+            </p>
+            <p>
+                <label for="pwd">Mot de passe : </label>
+                <br>
+                <input name="mot_de_passe" type="password" id="pwd" required>
+            </p>
+            <input type="submit" value="cliquer ici pour s'inscrire">
+            <p id="emplacement_erreur"></p>
+        </form>
+    </body>
+</html>

@@ -1,0 +1,601 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>Cr&eacute;ation d'une requ&ecirc;te sauvegard&eacute;e permettant de rechercher les comptes verrouill&eacute;s</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<link href="../../frame/microsoft_styles.css" rel="stylesheet" type="text/css">
+<SCRIPT src="../../js/clickTable.js" 
+type=text/javascript>
+</SCRIPT>
+<SCRIPT src="../../js/rollover.js" 
+type=text/javascript>
+</SCRIPT>
+<SCRIPT src="../../js/animation.js" 
+type=text/javascript>
+</SCRIPT>
+<SCRIPT src="../../js/rightMouseDis.js" 
+type=text/javascript>
+</SCRIPT>
+</head>
+
+<body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" onload="disableRightMouseclicks(); Initialize();">
+<table width="570" border="0" cellpadding="5" cellspacing="0" class="bodycopy">
+  <tr>
+    <td><p class="lessname">Cr&eacute;ation d'une requ&ecirc;te sauvegard&eacute;e permettant de rechercher les comptes verrouill&eacute;s<br>
+        <img src="../../images/header_line.png" width="560" height="2"/></p>
+
+      <p>Dans ces travaux dirig&eacute;s, vous allez cr&eacute;er, puis utiliser une requ&ecirc;te sauvegard&eacute;e pour rechercher un compte d'utilisateur verrouill&eacute;.</p>
+      <TABLE class=bodyText cellSpacing=0 cellPadding=0 border=0>
+        <TBODY>
+          <TR vAlign=top>
+            <TD width=1 
+          background="../../images/table/top_left1_top.gif" 
+          height=12></TD>
+            <TD width=14 
+          background="../../images/table/top_left_corner.gif" 
+          height=12></TD>
+            <TD width="200" 
+          height=12 
+          background="../../images/table/blue_withgreyborder.gif"></TD>
+            <TD 
+          background="../../images/table/blue_withgreyborder.gif" 
+          height=12></TD>
+            <TD width=1 
+          background="../../images/table/grey_dot.gif" 
+          height=* rowSpan=3></TD>
+            <TD 
+          background="../../images/table/blue_withgreyborder.gif"></TD>
+            <TD 
+          background="../../images/table/blue_withgreyborder.gif"></TD>
+            <TD width=17 
+          background="../../images/table/top_right_corner.gif" 
+          height=12></TD>
+            <TD width=1 
+          background="../../images/table/top_right2_top.gif" 
+          height=12></TD>
+          </TR>
+          <TR vAlign=top>
+            <TD width=1 
+          background="../../images/table/top_left1_middle.gif" 
+          height=2></TD>
+            <TD width=14 
+          background="../../images/table/blue_back.gif" 
+          height=2></TD>
+            <TD width="200" align=left 
+          background="../../images/table/blue_back.gif"><B></B>
+                <DIV class=bodyText><B class=colomntitle>T&acirc;ches</B></DIV>
+            </TD>
+            <TD 
+            background="../../images/table/blue_back.gif"><IMG 
+            height=1 src="../../images/table/spacer.gif" 
+            width=8></TD>
+            <TD 
+            background="../../images/table/blue_back.gif"><IMG 
+            height=1 src="../../images/table/spacer.gif" 
+            width=8></TD>
+            <TD align=left 
+          background="../../images/table/blue_back.gif"><B></B>
+                <DIV class=bodyText><B class=colomntitle>Points cl&eacute;s</B></DIV>
+            </TD>
+            <TD width=17 
+          background="../../images/table/blue_back.gif" 
+          height=2></TD>
+            <TD width=1 
+          background="../../images/table/top_right2_middle.gif" 
+          height=2></TD>
+          </TR>
+          <TR vAlign=top>
+            <TD width=1 
+          background="../../images/table/top_left1_bottom.gif" 
+          height=12></TD>
+            <TD width=14 
+          background="../../images/table/blue_back.gif" 
+          height=12></TD>
+            <TD width="200" 
+          height=12 background="../../images/table/blue_back.gif"></TD>
+            <TD background="../../images/table/blue_back.gif" 
+          height=12><IMG height=1 
+            src="../../images/table/spacer.gif" width=8></TD>
+            <TD 
+            background="../../images/table/blue_back.gif"><IMG 
+            height=1 src="../../images/table/spacer.gif" 
+            width=8></TD>
+            <TD 
+          background="../../images/table/blue_back.gif"></TD>
+            <TD width=17 
+          background="../../images/table/blue_back.gif" 
+          height=12></TD>
+            <TD width=1 
+          background="../../images/table/top_right2_bottom.gif" 
+          height=12></TD>
+          </TR>
+          <!-- Grey Line -->
+          <TR vAlign=top>
+            <TD background="../../images/table/grey_dot.gif" 
+          colSpan=8 height=1></TD>
+            <TD width=1 
+          background="../../images/table/grey_dot.gif" 
+          height=1></TD>
+          </TR>
+          <!-- Up to here! -->
+          <TR vAlign=top>
+            <TD width=1 
+          background="../../images/table/grey_dot.gif" 
+          height=10></TD>
+            <TD width=14 
+          background="../../images/table/yellow_back.gif" 
+          height=10></TD>
+            <TD width="200" 
+          height=10 
+          background="../../images/table/yellow_back.gif"></TD>
+            <TD 
+          background="../../images/table/yellow_back.gif" 
+          height=10></TD>
+            <TD width=1 
+          background="../../images/table/grey_dot.gif" 
+          height=* rowSpan=15></TD>
+            <TD 
+          background="../../images/table/yellow_back.gif"></TD>
+            <TD 
+          background="../../images/table/yellow_back.gif"></TD>
+            <TD width=17 
+          background="../../images/table/yellow_back.gif" 
+          height=10></TD>
+            <TD width=1 
+          background="../../images/table/grey_dot.gif" 
+          height=10></TD>
+          </TR>
+          <TR vAlign=top>
+            <TD width=1 
+          background="../../images/table/grey_dot.gif" 
+          height=2></TD>
+            <TD width=14 
+          background="../../images/table/yellow_back.gif" 
+          height=2></TD>
+            <TD width="200" align=left 
+          background="../../images/table/yellow_back.gif" class=bodycopy><strong>1</strong>. Ouvrez l'outil <strong>Utilisateurs et ordinateurs Active Directory</strong>. Dans <strong>Saved Queries</strong>, cr&eacute;ez un dossier nomm&eacute; <strong>Problem Accounts</strong>.</TD>
+            <TD 
+          background="../../images/table/yellow_back.gif">&nbsp;</TD>
+            <TD 
+          background="../../images/table/yellow_back.gif">&nbsp;</TD>
+            <TD align=left 
+          background="../../images/table/yellow_back.gif" class=bodycopy>Cr&eacute;ez des requ&ecirc;tes sauvegard&eacute;es pour gagner du temps lors de la r&eacute;alisation de t&acirc;ches courantes, telles que la recherche d'un compte verrouill&eacute;.</TD>
+            <TD width=17 
+          background="../../images/table/yellow_back.gif" 
+          height=2></TD>
+            <TD width=1 
+          background="../../images/table/grey_dot.gif" 
+          height=2></TD>
+          </TR>
+          <TR vAlign=top>
+            <TD width=1 
+          background="../../images/table/grey_dot.gif" 
+          height=2></TD>
+            <TD width=14 
+          background="../../images/table/yellow_back.gif" 
+          height=10></TD>
+            <TD width="200" 
+          height=10 align=left 
+          background="../../images/table/yellow_back.gif"></TD>
+            <TD 
+          background="../../images/table/yellow_back.gif" 
+          height=10></TD>
+            <TD 
+          background="../../images/table/yellow_back.gif" 
+          height=10></TD>
+            <TD 
+          height=10 align=left 
+          background="../../images/table/yellow_back.gif"></TD>
+            <TD width=17 
+          background="../../images/table/yellow_back.gif" 
+          height=10></TD>
+            <TD width=1 
+          background="../../images/table/grey_dot.gif" 
+          height=2></TD>
+          </TR>
+          <TR vAlign=top>
+            <TD width=1 
+          background="../../images/table/grey_dot.gif" 
+          height=1></TD>
+            <TD width=14 
+          background="../../images/table/grey_dot.gif" 
+          height=1></TD>
+            <TD width="200" 
+          height=1 align=left 
+          background="../../images/table/grey_dot.gif"></TD>
+            <TD background="../../images/table/grey_dot.gif" 
+          height=1></TD>
+            <TD background="../../images/table/grey_dot.gif" 
+          height=1></TD>
+            <TD 
+          height=1 align=left 
+          background="../../images/table/grey_dot.gif"></TD>
+            <TD width=17 
+          background="../../images/table/grey_dot.gif" 
+          height=1></TD>
+            <TD width=1 
+          background="../../images/table/grey_dot.gif" 
+          height=1></TD>
+          </TR>
+          <TR vAlign=top>
+            <TD width=1 
+          background="../../images/table/grey_dot.gif" 
+          height=2></TD>
+            <TD width=14 
+          background="../../images/table/yellow_back.gif" 
+          height=10></TD>
+            <TD width="200" 
+          height=10 align=left 
+          background="../../images/table/yellow_back.gif"></TD>
+            <TD 
+          background="../../images/table/yellow_back.gif" 
+          height=10></TD>
+            <TD 
+          background="../../images/table/yellow_back.gif" 
+          height=10></TD>
+            <TD 
+          height=10 align=left 
+          background="../../images/table/yellow_back.gif"></TD>
+            <TD width=17 
+          background="../../images/table/yellow_back.gif" 
+          height=10></TD>
+            <TD width=1 
+          background="../../images/table/grey_dot.gif" 
+          height=2></TD>
+          </TR>
+          <TR vAlign=top>
+            <TD width=1 
+          background="../../images/table/grey_dot.gif" 
+          height=2></TD>
+            <TD width=14 
+          background="../../images/table/yellow_back.gif" 
+          height=2></TD>
+            <TD width="200" align=left 
+          background="../../images/table/yellow_back.gif" class=bodycopy><strong>2</strong>. Dans le dossier <strong>Problem Accounts</strong>, cr&eacute;ez une nouvelle requ&ecirc;te sauvegard&eacute;e nomm&eacute;e <strong>Locked Accounts</strong>.</TD>
+            <TD 
+          background="../../images/table/yellow_back.gif">&nbsp;</TD>
+            <TD 
+          background="../../images/table/yellow_back.gif">&nbsp;</TD>
+            <TD align=left 
+          background="../../images/table/yellow_back.gif" class=bodycopy>Les outils <strong>Requ&ecirc;te sauvegard&eacute;e</strong> et <strong>Rechercher</strong> vous permettent de cr&eacute;er des requ&ecirc;tes LDAP (Lightweight Directory Access Protocol) pour rechercher des objets Active Directory.</TD>
+            <TD width=17 
+          background="../../images/table/yellow_back.gif" 
+          height=2></TD>
+            <TD width=1 
+          background="../../images/table/grey_dot.gif" 
+          height=2></TD>
+          </TR>
+          <TR vAlign=top>
+            <TD width=1 
+          background="../../images/table/grey_dot.gif" 
+          height=2></TD>
+            <TD width=14 
+          background="../../images/table/yellow_back.gif" 
+          height=10></TD>
+            <TD width="200" 
+          height=10 align=left 
+          background="../../images/table/yellow_back.gif"></TD>
+            <TD 
+          background="../../images/table/yellow_back.gif" 
+          height=10></TD>
+            <TD 
+          background="../../images/table/yellow_back.gif" 
+          height=10></TD>
+            <TD 
+          height=10 align=left 
+          background="../../images/table/yellow_back.gif"></TD>
+            <TD width=17 
+          background="../../images/table/yellow_back.gif" 
+          height=10></TD>
+            <TD width=1 
+          background="../../images/table/grey_dot.gif" 
+          height=2></TD>
+          </TR>
+          <TR vAlign=top>
+            <TD width=1 
+          background="../../images/table/grey_dot.gif" 
+          height=1></TD>
+            <TD width=14 
+          background="../../images/table/grey_dot.gif" 
+          height=1></TD>
+            <TD width="200" 
+          height=1 align=left 
+          background="../../images/table/grey_dot.gif"></TD>
+            <TD background="../../images/table/grey_dot.gif" 
+          height=1></TD>
+            <TD background="../../images/table/grey_dot.gif" 
+          height=1></TD>
+            <TD 
+          height=1 align=left 
+          background="../../images/table/grey_dot.gif"></TD>
+            <TD width=17 
+          background="../../images/table/grey_dot.gif" 
+          height=1></TD>
+            <TD width=1 
+          background="../../images/table/grey_dot.gif" 
+          height=1></TD>
+          </TR>
+          <TR vAlign=top>
+            <TD width=1 
+          background="../../images/table/grey_dot.gif" 
+          height=2></TD>
+            <TD width=14 
+          background="../../images/table/yellow_back.gif" 
+          height=10></TD>
+            <TD width="200" 
+          height=10 align=left 
+          background="../../images/table/yellow_back.gif"></TD>
+            <TD 
+          background="../../images/table/yellow_back.gif" 
+          height=10></TD>
+            <TD 
+          background="../../images/table/yellow_back.gif" 
+          height=10></TD>
+            <TD 
+          height=10 align=left 
+          background="../../images/table/yellow_back.gif"></TD>
+            <TD width=17 
+          background="../../images/table/yellow_back.gif" 
+          height=10></TD>
+            <TD width=1 
+          background="../../images/table/grey_dot.gif" 
+          height=2></TD>
+          </TR>
+          <TR vAlign=top>
+            <TD width=1 
+          background="../../images/table/grey_dot.gif" 
+          height=2></TD>
+            <TD width=14 
+          background="../../images/table/yellow_back.gif" 
+          height=2></TD>
+            <TD width="200" align=left 
+          background="../../images/table/yellow_back.gif" class=bodycopy><strong>3</strong>. Cliquez sur <strong>D&eacute;finir la requ&ecirc;te</strong>, puis sp&eacute;cifiez une requ&ecirc;te <strong>Recherche personnalis&eacute;e</strong>.</TD>
+            <TD 
+          background="../../images/table/yellow_back.gif">&nbsp;</TD>
+            <TD 
+          background="../../images/table/yellow_back.gif">&nbsp;</TD>
+            <TD align=left 
+          background="../../images/table/yellow_back.gif" class=bodycopy>Contrairement &agrave; l'interface utilisateur standard, le type de requ&ecirc;te <strong>Recherche personnalis&eacute;e</strong> vous permet de cr&eacute;er des requ&ecirc;tes LDAP, notamment pour les comptes verrouill&eacute;s.</TD>
+            <TD width=17 
+          background="../../images/table/yellow_back.gif" 
+          height=2></TD>
+            <TD width=1 
+          background="../../images/table/grey_dot.gif" 
+          height=2></TD>
+          </TR>
+          <TR vAlign=top>
+            <TD width=1 
+          background="../../images/table/grey_dot.gif" 
+          height=2></TD>
+            <TD width=14 
+          background="../../images/table/yellow_back.gif" 
+          height=10></TD>
+            <TD width="200" 
+          height=10 align=left 
+          background="../../images/table/yellow_back.gif"></TD>
+            <TD 
+          background="../../images/table/yellow_back.gif" 
+          height=10></TD>
+            <TD 
+          background="../../images/table/yellow_back.gif" 
+          height=10></TD>
+            <TD 
+          height=10 align=left 
+          background="../../images/table/yellow_back.gif"></TD>
+            <TD width=17 
+          background="../../images/table/yellow_back.gif" 
+          height=10></TD>
+            <TD width=1 
+          background="../../images/table/grey_dot.gif" 
+          height=2></TD>
+          </TR>
+          <TR vAlign=top>
+            <TD width=1 
+          background="../../images/table/grey_dot.gif" 
+          height=1></TD>
+            <TD width=14 
+          background="../../images/table/grey_dot.gif" 
+          height=1></TD>
+            <TD width="200" 
+          height=1 align=left 
+          background="../../images/table/grey_dot.gif"></TD>
+            <TD background="../../images/table/grey_dot.gif" 
+          height=1></TD>
+            <TD background="../../images/table/grey_dot.gif" 
+          height=1></TD>
+            <TD 
+          height=1 align=left 
+          background="../../images/table/grey_dot.gif"></TD>
+            <TD width=17 
+          background="../../images/table/grey_dot.gif" 
+          height=1></TD>
+            <TD width=1 
+          background="../../images/table/grey_dot.gif" 
+          height=1></TD>
+          </TR>
+          <TR vAlign=top>
+            <TD width=1 
+          background="../../images/table/grey_dot.gif" 
+          height=2></TD>
+            <TD width=14 
+          background="../../images/table/yellow_back.gif" 
+          height=10></TD>
+            <TD width="200" 
+          height=10 align=left 
+          background="../../images/table/yellow_back.gif"></TD>
+            <TD 
+          background="../../images/table/yellow_back.gif" 
+          height=10></TD>
+            <TD 
+          background="../../images/table/yellow_back.gif" 
+          height=10></TD>
+            <TD 
+          height=10 align=left 
+          background="../../images/table/yellow_back.gif"></TD>
+            <TD width=17 
+          background="../../images/table/yellow_back.gif" 
+          height=10></TD>
+            <TD width=1 
+          background="../../images/table/grey_dot.gif" 
+          height=2></TD>
+          </TR>
+          <TR vAlign=top>
+            <TD width=1 
+          background="../../images/table/grey_dot.gif" 
+          height=2></TD>
+            <TD width=14 
+          background="../../images/table/yellow_back.gif" 
+          height=2></TD>
+            <TD width="200" align=left 
+          background="../../images/table/yellow_back.gif" class=bodycopy><strong>4</strong>. Dans la bo&icirc;te de dialogue <strong>Rechercher recherche personnalis&eacute;e</strong>, utilisez l'onglet <strong>Avanc&eacute;</strong> pour sp&eacute;cifier une requ&ecirc;te LDAP. <br>              <br>
+              • Pour rechercher des comptes verrouill&eacute;s, tapez la requ&ecirc;te suivante sous forme de cha&icirc;ne unique&nbsp;: &ldquo;(&amp;(&amp;(&amp;(objectCategory=personne)<br>
+              (objectClass=utilisateur)<br>
+              (lockoutTime:1.2.840.113556.1.4.804:<br>
+              =4294967295))))&rdquo;.<br>              <br>
+              • Fermez la requ&ecirc;te<br></TD>
+            <TD 
+          background="../../images/table/yellow_back.gif"><IMG 
+            height=1 src="../../images/table/spacer.gif" 
+            width=8></TD>
+            <TD 
+          background="../../images/table/yellow_back.gif"><IMG 
+            height=1 src="../../images/table/spacer.gif" 
+            width=8></TD>
+            <TD align=left 
+          background="../../images/table/yellow_back.gif">
+              <DIV class=bodycopy><ul>
+                <li>L'onglet <strong>Recherche personnalis&eacute;e</strong> vous permet de cr&eacute;er rapidement une requ&ecirc;te utilisant de nombreux attributs, m&ecirc;me si vous ne connaissez pas le langage de requ&ecirc;te LDAP.<br>
+                </li>
+                <li>Utilisez l'onglet <strong>Avanc&eacute;</strong> pour cr&eacute;er vos propres requ&ecirc;tes si les langages de requ&ecirc;te LDAP vous sont familiers.<br>
+                </li>
+				<li>Entrez la cha&icirc;ne de requ&ecirc;te de recherche sans ins&eacute;rer de sauts de ligne</li>
+                <li>Si la requ&ecirc;te n'est pas entr&eacute;e correctement, vous serez inform&eacute; que la cha&icirc;ne de requ&ecirc;te n'est pas valide.<br>
+                </li>
+                <li>Une fois cr&eacute;&eacute;e, la requ&ecirc;te s'ex&eacute;cute automatiquement. Toutefois, les r&eacute;sultats ne sont pas automatiquement actualis&eacute;s &agrave; la prochaine s&eacute;lection de la requ&ecirc;te. Pour actualiser les r&eacute;sultats de la requ&ecirc;te, s&eacute;lectionnez la requ&ecirc;te, puis appuyez sur&nbsp;F5.</li>
+              </ul>
+              </DIV>
+            </TD>
+            <TD width=17 
+          background="../../images/table/yellow_back.gif" 
+          height=2></TD>
+            <TD width=1 
+          background="../../images/table/grey_dot.gif" 
+          height=2></TD>
+          </TR>
+          <TR vAlign=top>
+            <TD width=1 
+          background="../../images/table/grey_dot.gif" 
+          height=10></TD>
+            <TD width=14 
+          background="../../images/table/yellow_back.gif" 
+          height=10></TD>
+            <TD width="200" 
+          background="../../images/table/yellow_back.gif"></TD>
+            <TD 
+          background="../../images/table/yellow_back.gif"></TD>
+            <TD 
+          background="../../images/table/yellow_back.gif"></TD>
+            <TD 
+          background="../../images/table/yellow_back.gif"></TD>
+            <TD width=17 
+          background="../../images/table/yellow_back.gif" 
+          height=10></TD>
+            <TD width=1 
+          background="../../images/table/grey_dot.gif" 
+          height=10></TD>
+          </TR>
+          <!-- Grey Line -->
+          <TR vAlign=top>
+            <TD background="../../images/table/grey_dot.gif" 
+          colSpan=8 height=1></TD>
+            <TD width=1 
+          background="../../images/table/grey_dot.gif" 
+          height=1></TD>
+          </TR>
+          <!-- Up to here! -->
+          <TR vAlign=top>
+            <TD width=1 
+          background="../../images/table/grey_dot.gif" 
+          height=10></TD>
+            <TD width=14 
+          background="../../images/table/yellow_back.gif" 
+          height=2></TD>
+            <TD width="200" 
+          background="../../images/table/yellow_back.gif"></TD>
+            <TD 
+          background="../../images/table/yellow_back.gif"></TD>
+            <TD width=1 
+          background="../../images/table/grey_dot.gif" 
+          height=* rowSpan=3></TD>
+            <TD 
+          background="../../images/table/yellow_back.gif"></TD>
+            <TD 
+          background="../../images/table/yellow_back.gif"></TD>
+            <TD width=17 
+          background="../../images/table/yellow_back.gif" 
+          height=10></TD>
+            <TD width=1 
+          background="../../images/table/grey_dot.gif" 
+          height=10></TD>
+          </TR>
+          <TR vAlign=top>
+            <TD width=1 
+          background="../../images/table/grey_dot.gif" 
+          height=2></TD>
+            <TD width=14 
+          background="../../images/table/yellow_back.gif" 
+          height=2></TD>
+            <TD width="200" align=left 
+          background="../../images/table/yellow_back.gif" class=bodycopy>5. Exportez la d&eacute;finition de requ&ecirc;te dans un fichier nomm&eacute; Find&nbsp;Locked&nbsp;Users.xml, dans <strong>Mes documents</strong>. Importez la requ&ecirc;te &agrave; la racine du dossier <strong>Saved Queries</strong> sous le nom <strong>Find Locked</strong>&nbsp;<strong>Users-new</strong>. V&eacute;rifiez ensuite que la requ&ecirc;te que vous venez d'enregistrer retourne les m&ecirc;mes r&eacute;sultats que la requ&ecirc;te d'origine.</TD>
+            <TD 
+          background="../../images/table/yellow_back.gif"><IMG 
+            height=1 src="../../images/table/spacer.gif" 
+            width=8></TD>
+            <TD 
+          background="../../images/table/yellow_back.gif"><IMG 
+            height=1 src="../../images/table/spacer.gif" 
+            width=8></TD>
+            <TD align=left 
+          background="../../images/table/yellow_back.gif">
+              <DIV class=bodycopy>Vous pouvez envoyer les requ&ecirc;tes sauvegard&eacute;es par message &eacute;lectronique aux autres administrateurs.</DIV>
+            </TD>
+            <TD width=17 
+          background="../../images/table/yellow_back.gif" 
+          height=2></TD>
+            <TD width=1 
+          background="../../images/table/grey_dot.gif" 
+          height=2></TD>
+          </TR>
+          <TR vAlign=top>
+            <TD width=1 
+          background="../../images/table/bottom_left1_top.gif" 
+          height=12></TD>
+            <TD width=14 
+          background="../../images/table/left_bottom_corner.gif" 
+          height=12></TD>
+            <TD width="200" 
+          height=12 
+          background="../../images/table/yellow_withgreyborder.gif"></TD>
+            <TD 
+          background="../../images/table/yellow_withgreyborder.gif" 
+          height=12></TD>
+            <TD 
+          background="../../images/table/yellow_withgreyborder.gif" 
+          height=12></TD>
+            <TD 
+          height=12 
+          background="../../images/table/yellow_withgreyborder.gif"></TD>
+            <TD width=17 
+          background="../../images/table/right_bottom_corner.gif" 
+          height=12></TD>
+            <TD width=1 
+          background="../../images/table/bottom_right2_top.gif" 
+          height=12></TD>
+          </TR>
+        </TBODY>
+      </TABLE>
+      </td>
+  </tr>
+</table>
+</body>
+</html>

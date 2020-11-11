@@ -1,0 +1,4 @@
+dsadd user "cn=Ido Ben-Sachar,ou=CSO,dc=contoso,dc=msft" -samid bensachari -upn bensachari@contoso.msft -fn Ido -ln Ben-Sachar -display "Ido Ben-Sachar" -pwd P@ssw0rd
+dsadd user "cn=Jay Fluegel,ou=CSO,dc=contoso,dc=msft" -samid fluegelj -upn fluegelj@contoso.msft -fn Jay -ln Fluegel -display "Jay Fluegel" -pwd P@ssw0rd
+dsadd user "cn=Jon Grande,ou=CSO,dc=contoso,dc=msft" -samid grandej -upn grandej@contoso.msft -fn Jon -ln Grande -display "Jon Grande" -pwd P@ssw0rd
+dsadd user "cn=Alex Hankin,ou=CSO,dc=contoso,dc=msft" -samid hankina -upn hankina@contoso.msft -fn Alex -ln Hankin -display "Alex Hankin" -pwd P@ssw0rd

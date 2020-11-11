@@ -1,0 +1,3 @@
+INDEX VERSION 1.131+/media/su6/hSoftware/gitProjects/myGitProjects/java/workspace/.metadata/.plugins/org.eclipse.jdt.core
+646308851.index
+142541645.index

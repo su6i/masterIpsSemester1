@@ -1,0 +1,82 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>La tarte paramétrique</title>
+        <style>
+            textarea {
+                width: 500px;
+                height: 200px;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- <form action="traitement.php" method="GET"> -->
+        <!-- Utiliser $_POST permet ici d'envoyer des donénes sans qu'elles soient visibles dans l'URL; couplé à
+             enctype="multipart/form-data", cela permet aussi d'uploader des fichiers, à l'aide d'un input de type "file" -->
+        <form action="traitement.php" method="POST" enctype="multipart/form-data">
+            <p>
+                <label>Titre de la recette :</label>
+                <input type="text" required name="titre" placeholder="Tarte aux cailloux" size="40" pattern="^[^0-9]+$">
+                <!-- L'attribut "pattern" utilise une expression régulière (ou regexp) interdisant de saisir des chiffres -->
+            </p>
+            <p>
+                <label>Type de recette :</label>
+                <input type="radio" name="type" value="entree" id="type_entree">
+                <label for="type_entree">entrée</label>
+                <input type="radio" name="type" value="plat" id="type_plat" checked>
+                <label for="type_plat">plat</label>
+                <input type="radio" name="type" value="dessert" id="type_dessert">
+                <label for="type_dessert">dessert</label>
+            </p>
+            <p>
+                <label>Type de cuisine :</label>
+                <select name="cuisine">
+                    <option value=""></option>
+                    <option value="africaine">cuisine d'Afrique</option>
+                    <option value="asiatique">cuisine d'Asie</option>
+                    <option value="europeenne">cuisine d'Europe</option>
+                    <option value="grand_mere">cuisine de chez ma grand-mère</option>
+                </select>
+            </p>
+            <p>
+                <label>Allergènes :</label>
+                <input type="checkbox" name="allergenes[]" value="arachide" id="allergene_arachide">
+                <label for="allergene_arachide">arachides</label>
+                <input type="checkbox" name="allergenes[]" value="crevette" id="allergene_crevette">
+                <label for="allergene_crevette">crevettes</label>
+                <input type="checkbox" name="allergenes[]" value="ketchup" id="allergene_ketchup">
+                <label for="allergene_ketchup">ketchup</label>
+            </p>
+            <p>
+                <label>Difficulté :</label>
+                <input type="range" name="difficulte" min="1" max="3" step="1">
+            </p>
+            <p>
+                <label>Temps de préparation (mn) :</label>
+                <input type="number" name="temps" required min="5" max="180" step="5">
+            </p>
+            <p>
+                <textarea name="recette" placeholder="Ingrédients: bla, bla, bla. Étapes: 1)…"></textarea>
+            </p>
+            <p>
+                <label>Illustration (URL) :</label>
+                <input type="text" name="photo" placeholder="http://blabla.com/image.jpg" size="40">
+            </p>
+            <p>
+                <label>Illustration (fichier) :</label>
+                <input type="file" name="photo_fichier" accept="image/jpeg">
+            </p>
+            <p>
+                <label>Date d'ajout :</label>
+                <input name="date" type="date">
+            </p>
+            <p>
+                <label>Adresse email de l'auteur :</label>
+                <input type="email" name="adresse" required placeholder="camille@lapeste.not">
+            </p>
+            <p>
+                <input type="submit" value="Valider">
+            </p>
+        </form>
+    </body>
+</html>

@@ -1,0 +1,322 @@
+{
+  "AC.PA": {
+    "fullName": "Accor",
+    "sector": "hotels",
+    "subSector": "subSector",
+    "headquarters": "headquarters",
+    "dateFirstAdded": "dateFirstAdded",
+    "founded": "founded"
+  },
+  "AI.PA": {
+    "fullName": "Air Liquide",
+    "sector": "commodity chemicals",
+    "subSector": "subSector",
+    "headquarters": "headquarters",
+    "dateFirstAdded": "dateFirstAdded",
+    "founded": "founded"
+  },
+  "AIR.PA": {
+    "fullName": "Airbus",
+    "sector": "aerospace",
+    "subSector": "subSector",
+    "headquarters": "headquarters",
+    "dateFirstAdded": "dateFirstAdded",
+    "founded": "founded"
+  },
+  "MT.AS": {
+    "fullName": "ArcelorMittal",
+    "sector": "steel",
+    "subSector": "subSector",
+    "headquarters": "headquarters",
+    "dateFirstAdded": "dateFirstAdded",
+    "founded": "founded"
+  },
+  "ATO.PA": {
+    "fullName": "Atos",
+    "sector": "IT services",
+    "subSector": "subSector",
+    "headquarters": "headquarters",
+    "dateFirstAdded": "dateFirstAdded",
+    "founded": "founded"
+  },
+  "CS.PA": {
+    "fullName": "AXA",
+    "sector": "full line insurance",
+    "subSector": "subSector",
+    "headquarters": "headquarters",
+    "dateFirstAdded": "dateFirstAdded",
+    "founded": "founded"
+  },
+  "BNP.PA": {
+    "fullName": "BNP Paribas",
+    "sector": "banks",
+    "subSector": "subSector",
+    "headquarters": "headquarters",
+    "dateFirstAdded": "dateFirstAdded",
+    "founded": "founded"
+  },
+  "EN.PA": {
+    "fullName": "Bouygues",
+    "sector": "heavy construction",
+    "subSector": "subSector",
+    "headquarters": "headquarters",
+    "dateFirstAdded": "dateFirstAdded",
+    "founded": "founded"
+  },
+  "CAP.PA": {
+    "fullName": "Capgemini",
+    "sector": "IT services",
+    "subSector": "subSector",
+    "headquarters": "headquarters",
+    "dateFirstAdded": "dateFirstAdded",
+    "founded": "founded"
+  },
+  "CA.PA": {
+    "fullName": "Carrefour",
+    "sector": "food retailers and wholesalers",
+    "subSector": "subSector",
+    "headquarters": "headquarters",
+    "dateFirstAdded": "dateFirstAdded",
+    "founded": "founded"
+  },
+  "ACA.PA": {
+    "fullName": "Cr\u00e9dit Agricole",
+    "sector": "banks",
+    "subSector": "subSector",
+    "headquarters": "headquarters",
+    "dateFirstAdded": "dateFirstAdded",
+    "founded": "founded"
+  },
+  "BN.PA": {
+    "fullName": "Danone",
+    "sector": "food products",
+    "subSector": "subSector",
+    "headquarters": "headquarters",
+    "dateFirstAdded": "dateFirstAdded",
+    "founded": "founded"
+  },
+  "DSY.PA": {
+    "fullName": "Dassault Syst\u00e8mes",
+    "sector": "software",
+    "subSector": "subSector",
+    "headquarters": "headquarters",
+    "dateFirstAdded": "dateFirstAdded",
+    "founded": "founded"
+  },
+  "ENGI.PA": {
+    "fullName": "Engie",
+    "sector": "gas and electric utility",
+    "subSector": "subSector",
+    "headquarters": "headquarters",
+    "dateFirstAdded": "dateFirstAdded",
+    "founded": "founded"
+  },
+  "EL.PA": {
+    "fullName": "Essilor",
+    "sector": "medical supplies",
+    "subSector": "subSector",
+    "headquarters": "headquarters",
+    "dateFirstAdded": "dateFirstAdded",
+    "founded": "founded"
+  },
+  "RMS.PA": {
+    "fullName": "Herm\u00e8s",
+    "sector": "clothing and accessories",
+    "subSector": "subSector",
+    "headquarters": "headquarters",
+    "dateFirstAdded": "dateFirstAdded",
+    "founded": "founded"
+  },
+  "KER.PA": {
+    "fullName": "Kering",
+    "sector": "retail business",
+    "subSector": "subSector",
+    "headquarters": "headquarters",
+    "dateFirstAdded": "dateFirstAdded",
+    "founded": "founded"
+  },
+  "OR.PA": {
+    "fullName": "L'Or\u00e9al",
+    "sector": "personal products",
+    "subSector": "subSector",
+    "headquarters": "headquarters",
+    "dateFirstAdded": "dateFirstAdded",
+    "founded": "founded"
+  },
+  "LR.PA": {
+    "fullName": "Legrand",
+    "sector": "electrical components and equipment",
+    "subSector": "subSector",
+    "headquarters": "headquarters",
+    "dateFirstAdded": "dateFirstAdded",
+    "founded": "founded"
+  },
+  "MC.PA": {
+    "fullName": "LVMH",
+    "sector": "clothing and accessories",
+    "subSector": "subSector",
+    "headquarters": "headquarters",
+    "dateFirstAdded": "dateFirstAdded",
+    "founded": "founded"
+  },
+  "ML.PA": {
+    "fullName": "Michelin",
+    "sector": "tires",
+    "subSector": "subSector",
+    "headquarters": "headquarters",
+    "dateFirstAdded": "dateFirstAdded",
+    "founded": "founded"
+  },
+  "ORA.PA": {
+    "fullName": "Orange",
+    "sector": "telecommunications",
+    "subSector": "subSector",
+    "headquarters": "headquarters",
+    "dateFirstAdded": "dateFirstAdded",
+    "founded": "founded"
+  },
+  "RI.PA": {
+    "fullName": "Pernod Ricard",
+    "sector": "distillers and vintners",
+    "subSector": "subSector",
+    "headquarters": "headquarters",
+    "dateFirstAdded": "dateFirstAdded",
+    "founded": "founded"
+  },
+  "UG.PA": {
+    "fullName": "PSA",
+    "sector": "automobiles",
+    "subSector": "subSector",
+    "headquarters": "headquarters",
+    "dateFirstAdded": "dateFirstAdded",
+    "founded": "founded"
+  },
+  "PUB.PA": {
+    "fullName": "Publicis",
+    "sector": "media agencies",
+    "subSector": "subSector",
+    "headquarters": "headquarters",
+    "dateFirstAdded": "dateFirstAdded",
+    "founded": "founded"
+  },
+  "RNO.PA": {
+    "fullName": "Renault",
+    "sector": "automobiles",
+    "subSector": "subSector",
+    "headquarters": "headquarters",
+    "dateFirstAdded": "dateFirstAdded",
+    "founded": "founded"
+  },
+  "SAF.PA": {
+    "fullName": "Safran",
+    "sector": "aerospace and defence",
+    "subSector": "subSector",
+    "headquarters": "headquarters",
+    "dateFirstAdded": "dateFirstAdded",
+    "founded": "founded"
+  },
+  "SGO.PA": {
+    "fullName": "Saint-Gobain",
+    "sector": "building materials and fixtures",
+    "subSector": "subSector",
+    "headquarters": "headquarters",
+    "dateFirstAdded": "dateFirstAdded",
+    "founded": "founded"
+  },
+  "SAN.PA": {
+    "fullName": "Sanofi",
+    "sector": "pharmaceuticals",
+    "subSector": "subSector",
+    "headquarters": "headquarters",
+    "dateFirstAdded": "dateFirstAdded",
+    "founded": "founded"
+  },
+  "SU.PA": {
+    "fullName": "Schneider Electric",
+    "sector": "electrical components and equipment",
+    "subSector": "subSector",
+    "headquarters": "headquarters",
+    "dateFirstAdded": "dateFirstAdded",
+    "founded": "founded"
+  },
+  "GLE.PA": {
+    "fullName": "Soci\u00e9t\u00e9 G\u00e9n\u00e9rale",
+    "sector": "banks",
+    "subSector": "subSector",
+    "headquarters": "headquarters",
+    "dateFirstAdded": "dateFirstAdded",
+    "founded": "founded"
+  },
+  "SW.PA": {
+    "fullName": "Sodexo",
+    "sector": "food services and facilities management",
+    "subSector": "subSector",
+    "headquarters": "headquarters",
+    "dateFirstAdded": "dateFirstAdded",
+    "founded": "founded"
+  },
+  "STM.PA": {
+    "fullName": "STMicroelectronics",
+    "sector": "Semiconductors",
+    "subSector": "subSector",
+    "headquarters": "headquarters",
+    "dateFirstAdded": "dateFirstAdded",
+    "founded": "founded"
+  },
+  "FTI": {
+    "fullName": "TechnipFMC",
+    "sector": "Oil and Gas services",
+    "subSector": "subSector",
+    "headquarters": "headquarters",
+    "dateFirstAdded": "dateFirstAdded",
+    "founded": "founded"
+  },
+  "HO.PA": {
+    "fullName": "Thales",
+    "sector": "defense",
+    "subSector": "subSector",
+    "headquarters": "headquarters",
+    "dateFirstAdded": "dateFirstAdded",
+    "founded": "founded"
+  },
+  "FP.PA": {
+    "fullName": "Total",
+    "sector": "integrated oil and gas",
+    "subSector": "subSector",
+    "headquarters": "headquarters",
+    "dateFirstAdded": "dateFirstAdded",
+    "founded": "founded"
+  },
+  "URW.AS": {
+    "fullName": "Unibail-Rodamco-Westfield",
+    "sector": "real estate investment trusts",
+    "subSector": "subSector",
+    "headquarters": "headquarters",
+    "dateFirstAdded": "dateFirstAdded",
+    "founded": "founded"
+  },
+  "VIE.PA": {
+    "fullName": "Veolia",
+    "sector": "water, waste, transport, energy",
+    "subSector": "subSector",
+    "headquarters": "headquarters",
+    "dateFirstAdded": "dateFirstAdded",
+    "founded": "founded"
+  },
+  "DG.PA": {
+    "fullName": "Vinci",
+    "sector": "heavy construction",
+    "subSector": "subSector",
+    "headquarters": "headquarters",
+    "dateFirstAdded": "dateFirstAdded",
+    "founded": "founded"
+  },
+  "VIV.PA": {
+    "fullName": "Vivendi",
+    "sector": "broadcasting and entertainment",
+    "subSector": "subSector",
+    "headquarters": "headquarters",
+    "dateFirstAdded": "dateFirstAdded",
+    "founded": "founded"
+  }
+}

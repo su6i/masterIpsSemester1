@@ -1,0 +1,1 @@
+dsadd user "cn=prof,ou=enseignants,dc=local,dc=intra" -samid prof -upn prof@local.intra -fn professeur -ln professeur -display "prof" -pwd P@ssw0rd 

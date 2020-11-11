@@ -1,0 +1,144 @@
+# do sh ip int brief
+- pour forcer le switch d'afficher la command
+
+# les modes de configurations dans le switch
+- execute
+- enable
+- interface
+- vlan
+- sub-interface
+
+#
+sho int trunk
+
+
+
+
+# 
+- int gi0/1
+- channel-group
+
+# 802.1Q: protocol d'encapsulation de la tram
+il faudrait du trunk entre les switches
+# Dot1Q
+
+# CIDR
+# VLSM
+
+
+# write
+
+# Create an Etherchannel level 2
+
+if$ int gi0/1
+if$ channel-group 1 mod desirable
+do sh run
+show etherchannel summary
+en
+conf t
+int fa0/1
+channel-group 1 mod desirable
+end
+wr
+show spanning-tree
+
+no channel-group 1 mod desirable
+LACP(IEEE) vs PAgP(Cisco)
+reload
+
+ports mods: access, trunk, auto
+vlan
+dot1q, 802.1q
+interswitch is always on trunk mod, even if we have just one vlan
+QnQ, to use more than 4416 basic vlan
+
+# Change mod to Trunk
+
+# Create vlan
+
+- conf t
+- vlan 10 
+- vlan 20
+- end 
+- wr
+- sh vlan
+
+show vlan
+vlan.dat is in flash memory
+ct$ vlan 10
+switchport mode access 
+switchport access vlan 10
+show spanning-tree
+
+# il faut que mode soit en mode access pour pouvoir lui ajouter des vlan
+- int fa0/1
+- switchport mode access
+
+
+VTP server, vtp client
+
+
+# Etherchannel
+en
+int fa0/1
+channel-group 1 mode desireable/active
+
+
+# mode trunk
+- conf t
+- int g0/1
+- switchport mod trunk
+- end
+- wr
+
+# vtp, mettre à jour les vlan
+- conf t
+- vtp mod client
+- vtp domain um2
+- end
+- wr
+
+# 
+- int f0/1
+- no channel-group 2 mod active
+- int f0/2
+- no channel-group 2 mod desireable
+
+
+Réseaux
+
+VLSM , IP ANS MASK
+
+# put in trunk mode and add a port in vlan
+IF$ switchport mode access
+IF$ Switchport access vlan 10
+
+# show arp table
+arp -a
+
+# delete arp table
+arp -d
+
+
+# vlan is in layer 2
+# ip is in layer 3
+
+Show vlan
+
+# create vlan 10
+vlan 10
+
+Crc
+destination switch will remove the vlan tag
+dot1q 802.1q
+QnQ
+vxlan
+
+switchport mode trunk
+
+
+
+
+
+
+

@@ -1,0 +1,11 @@
+DN,cn,displayName,sn,givenName,userPrincipalName,objectClass
+CN=Etud1,OU=Etud,DC=local,DC=intra,Etudiant1,etudiant1,ET1,Etud1,Etud1@local.intra,user
+CN=Etud2,OU=Etud,DC=local,DC=intra,Etudiant2,etudiant2,ET2,Etud2,Etud2@local.intra,user
+CN=Etud3,OU=Etud,DC=local,DC=intra,Etudiant3,etudiant3,ET3,Etud3,Etud3@local.intra,user
+CN=Etud4,OU=Etud,DC=local,DC=intra,Etudiant4,etudiant4,ET4,Etud4,Etud4@local.intra,user
+CN=Etud5,OU=Etud,DC=local,DC=intra,Etudiant5,etudiant5,ET5,Etud5,Etud5@local.intra,user
+CN=Etud6,OU=Etud,DC=local,DC=intra,Etudiant6,etudiant6,ET6,Etud6,Etud6@local.intra,user
+CN=Etud7,OU=Etud,DC=local,DC=intra,Etudiant7,etudiant7,ET7,Etud7,Etud7@local.intra,user
+CN=Etud8,OU=Etud,DC=local,DC=intra,Etudiant8,etudiant8,ET8,Etud8,Etud8@local.intra,user
+CN=Etud9,OU=Etud,DC=local,DC=intra,Etudiant9,etudiant9,ET9,Etud9,Etud9@local.intra,user
+CN=Etud10,OU=Etud,DC=local,DC=intra,Etudiant10,etudiant10,ET10,Etud10,Etud10@local.intra,user

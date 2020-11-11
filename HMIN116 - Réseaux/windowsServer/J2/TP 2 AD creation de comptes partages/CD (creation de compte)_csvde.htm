@@ -1,0 +1,132 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>Utilisation de CSVDE pour cr&eacute;er des comptes d'utilisateurs</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<link href="../../frame/microsoft_styles.css" rel="stylesheet" type="text/css">
+<SCRIPT src="../../js/clickTable.js" 
+type=text/javascript>
+</SCRIPT>
+<SCRIPT src="../../js/rollover.js" 
+type=text/javascript>
+</SCRIPT>
+<SCRIPT src="../../js/animation.js" 
+type=text/javascript>
+</SCRIPT>
+<SCRIPT src="../../js/rightMouseDis.js" 
+type=text/javascript>
+</SCRIPT>
+</head>
+
+<body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" onload="disableRightMouseclicks(); Initialize();">
+<table width="570" border="0" cellpadding="5" cellspacing="0" class="bodycopy">
+  <tr>
+    <td><p class="lessname">Utilisation de CSVDE pour cr&eacute;er des comptes d'utilisateurs<br>
+      <img src="../../images/header_line.png" width="560" height="2"/></p>
+      <p>CSVDE (Comma-Separated Value Directory Exchange) permet d'ajouter de mani&egrave;re efficace un grand nombre d'utilisateurs au service d'annuaire Active Directory. Les informations de la plupart des bases de donn&eacute;es peuvent &ecirc;tre export&eacute;es au format universel CSV. Apr&egrave;s modification, ces informations peuvent &ecirc;tre import&eacute;es directement dans Active Directory. Vous ne pouvez pas utiliser le format CSVDE pour supprimer ou modifier des objets dans Active Directory. Pour garantir le succ&egrave;s de l'importation, vous devez v&eacute;rifier que le fichier est bien au format CSVDE. En r&egrave;gle g&eacute;n&eacute;rale, pour modifier et mettre en forme un fichier texte, vous devez utiliser une application offrant des fonctionnalit&eacute;s d'&eacute;dition &eacute;volu&eacute;es, telle que Microsoft Excel. Il vous suffit ensuite de l'enregistrer en tant que fichier texte d&eacute;limit&eacute; par des virgules (CSV).</p>
+      <p>Lorsque vous cr&eacute;ez plusieurs comptes d'utilisateurs, les informations contenues dans le fichier&nbsp;CSV doivent comprendre le chemin d'acc&egrave;s du compte d'utilisateur dans Active Directory, le type d'objet (le compte d'utilisateur), ainsi que le nom d'ouverture de session de l'utilisateur. En revanche, elles ne peuvent pas comprendre de mots de passe. Les mots de passe seront tous vides et devront &ecirc;tre modifi&eacute;s par les utilisateurs. </p>
+      <p>Mettez en forme le fichier CSV de sorte que la premi&egrave;re ligne soit une ligne d'attributs et que chaque compte d'utilisateur poss&egrave;de une ligne suppl&eacute;mentaire. La ligne d'attributs sp&eacute;cifie le nom de chaque attribut &agrave; d&eacute;finir pour l'ensemble des nouveaux comptes d'utilisateurs. Chaque ligne suppl&eacute;mentaire sp&eacute;cifie les valeurs de chaque compte d'utilisateur. S'il manque une valeur d'attribut, laissez-la vide mais ins&eacute;rez toutes les virgules n&eacute;cessaires. Si une valeur comporte des virgules, entourez-la de guillemets. L'exemple suivant comprend deux des comptes d'utilisateurs que vous devez cr&eacute;er&nbsp;:</p>
+      <table width="560" border="0" cellpadding="0" cellspacing="0" bgcolor="E3E3E3">
+      <tr bgcolor="E3E3E3">
+        <td width="5" height="5"><img src="../../images/code/topLeft.gif" width="5" height="5"></td>
+        <td height="5"><img src="../../images/trans.gif" width="1" height="1"></td>
+          <td width="5" height="5"><img src="../../images/code/topRight.gif" width="5" height="5"></td>
+      </tr>
+      <tr bgcolor="E3E3E3">
+        <td width="5"><img src="../../images/trans.gif" width="1" height="1"></td>
+        <td><table width="100%" border="0" cellspacing="0" cellpadding="5" class="codetext"
+		>
+            <tr>
+              <td><p>DN,objectClass,cn,sn,givenName,displayName,name,countryCode, userPrincipalName,objectCategory</p>
+                </td>
+            </tr>
+          </table>
+        </td>
+        <td width="5"><img src="../../images/trans.gif" width="1" height="1"></td>
+      </tr>
+      <tr bgcolor="E3E3E3">
+        <td width="5" height="5"><img src="../../images/code/bottomLeft.gif" width="5" height="5"></td>
+        <td height="5"><img src="../../images/trans.gif" width="1" height="1"></td>
+        <td width="5" height="5"><img src="../../images/code/bottomRight.gif" width="5" height="5"></td>
+      </tr>
+    </table>
+    <br>
+      <table width="560" border="0" cellpadding="0" cellspacing="0" bgcolor="E3E3E3">
+        <tr bgcolor="E3E3E3">
+          <td width="5" height="5"><img src="../../images/code/topLeft.gif" width="5" height="5"></td>
+          <td height="5"><img src="../../images/trans.gif" width="1" height="1"></td>
+          <td width="5" height="5"><img src="../../images/code/topRight.gif" width="5" height="5"></td>
+        </tr>
+        <tr bgcolor="E3E3E3">
+          <td width="5"><img src="../../images/trans.gif" width="1" height="1"></td>
+          <td><table width="100%" border="0" cellspacing="0" cellpadding="5" class="codetext"
+		>
+              <tr>
+                <td><p>&quot;CN=John Smith,ou=CSO,DC=contoso,DC=com&quot;,user,John Smith,Smith,John,John Smith,John Smith,0,smithj@contoso.com,&quot;CN=Personne,CN=Sch&eacute;ma,CN=Configuration, DC=contoso,DC=com&quot;</p>
+              </td>
+              </tr>
+            </table>
+          </td>
+          <td width="5"><img src="../../images/trans.gif" width="1" height="1"></td>
+        </tr>
+        <tr bgcolor="E3E3E3">
+          <td width="5" height="5"><img src="../../images/code/bottomLeft.gif" width="5" height="5"></td>
+          <td height="5"><img src="../../images/trans.gif" width="1" height="1"></td>
+          <td width="5" height="5"><img src="../../images/code/bottomRight.gif" width="5" height="5"></td>
+        </tr>
+      </table>    
+      <br>
+      <table width="560" border="0" cellpadding="0" cellspacing="0" bgcolor="E3E3E3">
+        <tr bgcolor="E3E3E3">
+          <td width="5" height="5"><img src="../../images/code/topLeft.gif" width="5" height="5"></td>
+          <td height="5"><img src="../../images/trans.gif" width="1" height="1"></td>
+          <td width="5" height="5"><img src="../../images/code/topRight.gif" width="5" height="5"></td>
+        </tr>
+        <tr bgcolor="E3E3E3">
+          <td width="5"><img src="../../images/trans.gif" width="1" height="1"></td>
+          <td><table width="100%" border="0" cellspacing="0" cellpadding="5" class="codetext"
+		>
+              <tr>
+                <td><p>&quot;CN=Kelly Blue,ou=CSO,DC=contoso,DC=com&quot;,user,Kelly Blue,Blue, Kelly,KellyBlue,KellyBlue,0,bluek@contoso.com,&quot;CN=Personne,CN=Sch&eacute;ma, CN=Configuration,DC=contoso,DC=com&quot;</p>
+                </td>
+              </tr>
+            </table>
+          </td>
+          <td width="5"><img src="../../images/trans.gif" width="1" height="1"></td>
+        </tr>
+        <tr bgcolor="E3E3E3">
+          <td width="5" height="5"><img src="../../images/code/bottomLeft.gif" width="5" height="5"></td>
+          <td height="5"><img src="../../images/trans.gif" width="1" height="1"></td>
+          <td width="5" height="5"><img src="../../images/code/bottomRight.gif" width="5" height="5"></td>
+        </tr>
+      </table>    
+      <p>Une fois le fichier CSV cr&eacute;&eacute;, vous pouvez l'importer en ex&eacute;cutant la ligne de commande suivante &agrave; partir de l'invite de commandes&nbsp;:</p>
+      <table width="560" border="0" cellpadding="0" cellspacing="0" bgcolor="E3E3E3">
+        <tr bgcolor="E3E3E3">
+          <td width="5" height="5"><img src="../../images/code/topLeft.gif" width="5" height="5"></td>
+          <td height="5"><img src="../../images/trans.gif" width="1" height="1"></td>
+          <td width="5" height="5"><img src="../../images/code/topRight.gif" width="5" height="5"></td>
+        </tr>
+        <tr bgcolor="E3E3E3">
+          <td width="5"><img src="../../images/trans.gif" width="1" height="1"></td>
+          <td><table width="100%" border="0" cellspacing="0" cellpadding="5" class="codetext"
+		>
+              <tr>
+                <td><p>CSVDE &ndash;i &ndash;f fichier.csv</p>
+              </td>
+              </tr>
+            </table>
+          </td>
+          <td width="5"><img src="../../images/trans.gif" width="1" height="1"></td>
+        </tr>
+        <tr bgcolor="E3E3E3">
+          <td width="5" height="5"><img src="../../images/code/bottomLeft.gif" width="5" height="5"></td>
+          <td height="5"><img src="../../images/trans.gif" width="1" height="1"></td>
+          <td width="5" height="5"><img src="../../images/code/bottomRight.gif" width="5" height="5"></td>
+        </tr>
+      </table>    
+    </td>
+  </tr>
+</table>
+</body>
+</html>

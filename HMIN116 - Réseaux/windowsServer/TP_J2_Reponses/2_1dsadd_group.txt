@@ -1,0 +1,2 @@
+dsadd group "cn=enseignants,ou=groupes,dc=local,dc=intra"
+dsadd group "cn=etudiants,ou=groupes,dc=local,dc=intra" 

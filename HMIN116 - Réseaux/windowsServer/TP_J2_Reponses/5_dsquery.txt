@@ -1,0 +1,3 @@
+dsquery user -name etu*
+dsquery user -disabled
+dsquery group -name etud*

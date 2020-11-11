@@ -1,0 +1,93 @@
+package tp3_2019;
+
+public class Colis extends ObjetPostal{
+
+	/*************************************Attributs*********************************/
+
+	//	—  Les colis possèdent les caractéristiques complémentaires suivantes que 
+	// vous représenterez par des attributs : une déclaration de contenu (texte), 
+	// une valeur déclarée (en euros).
+	private String contenu;
+	private double valeur;
+	private TauxRec tauxRecommandation;
+
+
+	/*************************************constructeurs*****************************/
+
+	//	—  Munissez la classe Colis de tous les accesseurs et constructeurs qui vous 
+	// semblent pertinents en les générant automatiquement avec Eclipse.
+
+	public Colis() {
+
+	}
+	
+	
+	public Colis(String origine, String destination, int codePostal, double poids, 
+			double volume, int tauxRecommandation, boolean urgente, String contenu, double valeur) {
+		super(origine, destination, codePostal, poids, volume, tauxRecommandation);
+		
+		this.contenu = contenu;
+		this.valeur = valeur;
+
+	}
+
+	/*************************************accesseurs********************************/
+
+	public String getContenu() {
+		return this.contenu;
+	}
+	
+	public void setContenu(String contenu) {
+		this.contenu = contenu;		
+	}
+
+	//----------------------------------------------------------------------------------
+	public double getValeur() {
+		return this.valeur;
+	}
+	
+	public void setValeur(double valeur) {
+		this.valeur = valeur;		
+	}
+
+	/*************************************méthodes**********************************/
+
+	//	—  Ecrivez une méthode String toString() qui retourne une chaîne comprenant 
+	//tous les attributs de manière à connaître l’état d’un objet.
+	
+	public String toString() {
+		return super.toString()+" contenu: "+this.contenu+" "+this.valeur+"€";
+	}
+	
+// 4 - Tarif d’affranchissement
+	// Le tarif d’affranchissement d’un colis s’obtient par cumul des sommes suivantes :
+    // -  2 euros dans tous les cas (tarif de base),-  0.5 euro si le taux de recommandation, 
+    // est 1, 1.5 euros si le taux de recommandation est 2 (comme pour les lettres),
+    // -  3 euros de surtaxe si le colis d ́epasse 1/8 de m3.
+	public double tarifAffranchissement() {
+		double prixBase = 2.0;
+		int surTax = 3;
+		prixBase +=super.addRates();
+		if (super.getVolume()>1.8)
+			prixBase +=surTax;
+		return prixBase;
+	}// fin de tarifAffranchissement()
+
+
+	@Override
+	public double tarifRemboursement() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+
+	@Override
+	public double tarifBase() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	
+	
+
+}// class Colis extends ObjetPostal

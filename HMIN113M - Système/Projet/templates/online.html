@@ -1,0 +1,141 @@
+{% extends "base.html" %}
+
+
+{% block content_left %}
+
+<div class="container">
+
+  <div class="finance">
+    <form action="{{ url_for('online') }}" method="POST" id="tickerForm">
+      <br>
+      <br>
+      <br>
+    <fieldset>
+      <legend>Data reader:</legend>
+      <table>
+          <tr>
+          <td><input type="radio" name="reader" value="yahoo"    id="yahoo" checked><label for="yahoo">Yahoo Finance</label></td>
+          </tr>
+          <tr>
+            <td><input type="radio" name="reader" value="pandas"   id="pandas"><label for="pandas">Pandas</label> </td>
+          </tr>
+          <tr>
+            <td><input type="radio" name="reader" value="google"   id="google" disabled><label for="google">Google Finance</label></td>
+          </tr>
+      </table>
+  </fieldset>
+  <fieldset><legend>Stock markets:</legend>
+    <table class="markets">
+      <tr>
+          <td><input type="checkbox" name="markets" value="sp500"   id="sp500" checked>
+            <label for="sp500">S&P500 </label> </td>
+          <td><input type="checkbox" name="markets" value="nasdaq"  id="nasdaq" disabled>       <label for="nasdaq">Nasdaq</label> </td>
+          </tr>
+          <tr>
+              <td><input type="checkbox" name="markets" value="cac40"   id="cac40">        <label for="cac40">CAC40  </label> </td>
+              <td><input type="checkbox" name="markets" value="tehran"  id="tehran" disabled>       <label for="tehran">Tehran</label> </td>
+          </tr>
+  </table>
+</fieldset>
+
+    <fieldset>
+      <legend>Display:</legend>
+      <table>
+      <tr><td><input type="radio" name="displayForm" id='dataframe' value='dataframe' checked> Data Frame</td></tr>
+    <tr><td><input type="radio" name="displayForm" id='matplot' value='matplot'> MatPlot</td></tr>
+  </table>
+    </fieldset>
+    <label for="ticker">Share's ticker: </label>
+
+          <div class="input-group mb-3 multipicker">
+              <select  class="js-example-basic-multiple form-control" style="width:400px" name="tickers" multiple placeholder="Please enter a ticker, ex: aapl for Apple Company"></select>
+              <div class="input-group-append">
+
+                <button class="btn btn-outline-secondary" type="submit">Search</button>
+              </div>
+          </div>
+
+            <!-- <datalist id="ticker">
+                  <option value="AMZN">Amazon</option>
+                  <option value="FB">Facebook</option>
+                  <option value="AAPL">Apple</option>
+                  <option value="GOOGL">Google</option>
+                  <option value="MSFT">Microsoft</option>
+            </datalist> -->
+            Start: <input type="date" name="start" id="start" value="2020-01-01">
+            &nbsp;End: <input type="date" name="end" id="end" value="2020-01-13">
+            &nbsp;Filter:
+            <select name="filter" form="tickerForm">
+              <option value="all">All</option>
+              <option value="Open">Open</option>
+              <option value="High">High</option>
+              <option value="Low">Low</option>
+              <option value="Close">Close</option>
+            </select>
+
+            </tr>
+        </table>
+    </fieldset>
+    </form>
+
+  </div>
+
+</div>
+
+
+{% endblock %}
+
+
+{% block content_right %}
+
+
+    <div id="result" style="font-size: 20px;">
+
+    {% if (tickers and start and end) is defined and (tickers and start and end) is not none %}
+
+      <p> You looked for:</p>
+      <dl>
+        {% for ticker in tickers %}
+        <dt>- {{ ticker }}'s share price</dt>
+        <dt style="padding-left:20px;">from {{ start }} to {{ end }}</dt>
+      </dl>
+
+      {% if df is defined and df is not none and df is not string %}
+      <pre style="color: white;">
+
+        {{ df[filter] }}
+      </pre>
+
+      {% endif %}
+      {% endfor %}
+      {% endif %}
+
+
+    <!-- {% if ticker is defined and ticker is not none %}
+      <dl>
+      {% for t in ticker %}
+        {% for key, value in t.items() %}
+          <dt>- {{ key|e }}</dt>
+          <dt style="padding-left:20px;">{{ value|e }}</dt>
+          {% endfor %} <br/>
+      {% endfor %}
+      </dl>
+     {% else %}
+      <dl>
+         <dt> {{ notFound }}, not found in the S&P500's list.</dt>
+      </dl>
+     {% endif %} -->
+
+
+
+
+    </div>
+
+
+{% endblock %}
+
+
+{% block script %}
+
+
+  {% endblock %}

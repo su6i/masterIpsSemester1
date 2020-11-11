@@ -1,0 +1,109 @@
+package tp3_2019;
+
+public class Lettre extends ObjetPostal{
+	/***************************************************************************************************/
+	//-----------------2    Eléments de base de la classe Lettre----------/
+	/***************************************************************************************************/
+	//Question 4 Créez une sous-classe Lettre de la classe ObjetPostal.
+	//	—  Introduisez dans la classe Lettre un attribut pour représenter le fait qu’une lettre peutˆetre urgente ou ordinaire.
+
+	private boolean urgente;
+<<<<<<< HEAD
+	private TauxRec tauxRecommandation;
+=======
+	// private TauxRec tauxRecommandation;
+>>>>>>> 96837234d179f4a72cfef78b424d98f86da4641b
+
+	
+	/***************************************************************************************************/
+	/************************************ Partie Constructeurs *****************************************/
+	//	—  Munissez la classe Lettre de tous les accesseurs et constructeurs qui vous semblent pertinents.
+
+	public Lettre() {
+<<<<<<< HEAD
+=======
+		
+>>>>>>> 96837234d179f4a72cfef78b424d98f86da4641b
+
+	}
+	
+	
+	public Lettre(String origine, String destination, int codePostal, double poids, 
+			double volume, TauxRec tauxRecommandation, boolean urgente) {
+		super(origine, destination, codePostal, poids, volume, tauxRecommandation);
+		this.setUrgente(urgente);
+
+	}
+
+	/******************************************Partie Accesseurs ***************************************/
+
+	public boolean getUrgente() {
+		return this.urgente;
+	}
+	
+	public void setUrgente(boolean urgente) {
+		this.urgente = urgente;		
+	}
+
+	//	Question 4 —  Ecrivez une méthode String toString() qui retourne une chaîne comprenant tous lesattributs de manière `a connaître l’état d’un objet.
+	@Override
+	public String toString() {
+		if (this.urgente)
+			return super.toString()+" type: urgente";
+		else
+			return super.toString()+" type: ordinaire";
+	}
+
+//	4 - Tarif d’affranchissement
+	// -  0.30 euro si c’est une lettre urgente.
+	@Override
+	public double addRates() {
+		double addRate = super.addRates();
+		if (this.urgente) {
+			addRate += 0.3;
+		}
+		return addRate;
+	}
+	/*public double tarifAffranchissement() {
+		//double prixBase = 0.0;
+		double addRate = 0.0;
+		if (this.urgente) {
+			addRate = 0.3;
+		}
+		//prixBase +=addRate;
+		return super.tarifAffranchissement()+addRate;
+	}// fin de tarifAffranchissement()
+*/
+	
+	
+
+	@Override
+<<<<<<< HEAD
+	public double tarifRemboursement()
+	{
+		double tarif = 0;
+		if (this.getTauxRecommandation().equals(TauxRec.moyen)) tarif = 1.5; // j'ai ecrit en deux forms pour que je n'oublie pas que les deux sont correctes
+		else if (this.getTauxRecommandation()==TauxRec.fort) tarif = 15; // j'ai ecrit en deux forms pour que je n'oublie pas que les deux sont correctes
+		return tarif;
+=======
+	public double tarifRemboursement() {
+		
+		double tarifRemboursement = 0.0;
+		if (this.getTauxRecommandation().equals(TauxRec.moyen)) tarifRemboursement = 1.5; // Two ways are equal
+		else if (this.getTauxRecommandation()==TauxRec.fort) tarifRemboursement = 15;	 // Two ways are equal
+		return tarifRemboursement;
+>>>>>>> 96837234d179f4a72cfef78b424d98f86da4641b
+	}
+
+
+	@Override
+	public double tarifBase() {
+		// TODO Auto-generated method stub
+		return 0.5;
+	}
+
+	
+	
+
+}//Lettre extends ObjetPostal()
+

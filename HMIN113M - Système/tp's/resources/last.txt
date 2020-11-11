@@ -1,0 +1,11 @@
+amir.shirali-pour@etu.umontpelli tty8         :1               Wed Oct 23 13:27    gone - no logout
+amir.shirali-pour@etu.umontpelli tty8         :1               Wed Oct 23 12:57 - 13:24  (00:26)
+zah.zoro-bi@etu.umontpellier.fr tty8         :1               Fri Oct 18 10:24 - 13:02  (02:38)
+hichem.koched@etu.umontpellier.f tty8         :1               Thu Oct 17 14:21 - 16:26  (02:05)
+nastasija.mijovic@etu.umontpelli tty7         :0               Tue Oct 15 09:31    gone - no logout
+zah.zoro-bi@etu.umontpellier.fr tty7         :0               Wed Oct  9 15:00 - 16:50  (01:50)
+felix.costa@etu.umontpellier.fr tty7         :0               Thu Oct  3 11:44 - 13:09  (01:25)
+reboot   system boot  4.15.0-65-generic Thu Oct  3 05:00   still running
+amir.shirali-pour@etu.umontpelli tty7         :0               Wed Oct  2 11:22 - 12:46  (01:23)
+
+wtmp commence Wed Oct  2 11:22:50 2019

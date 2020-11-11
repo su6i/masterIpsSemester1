@@ -1,0 +1,117 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>Utilisation de Dsadd pour cr&eacute;er des groupes</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<link href="../../frame/microsoft_styles.css" rel="stylesheet" type="text/css">
+<SCRIPT src="../../js/clickTable.js" 
+type=text/javascript>
+</SCRIPT>
+<SCRIPT src="../../js/rollover.js" 
+type=text/javascript>
+</SCRIPT>
+<SCRIPT src="../../js/animation.js" 
+type=text/javascript>
+</SCRIPT>
+<SCRIPT src="../../js/rightMouseDis.js" 
+type=text/javascript>
+</SCRIPT>
+</head>
+
+<body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" onload="disableRightMouseclicks(); Initialize();">
+<table width="570" border="0" cellpadding="5" cellspacing="0" class="bodycopy">
+  <tr>
+    <td><p class="lessname">Utilisation de Dsadd pour cr&eacute;er des groupes<br>
+      <img src="../../images/header_line.png" width="560" height="2"/></p>      
+
+      <p><strong>Dsadd</strong> est un outil de ligne de commande qui permet d'ajouter un groupe ou un autre objet au service d'annuaire Active Directory. <strong>Dsadd</strong> n'ajoute qu'un seul groupe &agrave; la fois. Toutefois, il s'utilise g&eacute;n&eacute;ralement dans un fichier de commandes pour ajouter plusieurs groupes dans Active Directory. De mani&egrave;re g&eacute;n&eacute;rale, l'utilisation du composant <strong>Utilisateurs et ordinateurs Active Directory</strong> pour cr&eacute;er moins d'une douzaine de groupes est plus rapide et g&eacute;n&egrave;re moins d'erreurs.</p>
+      
+	  <p>Pour cr&eacute;er un groupe &agrave; l'aide de <b>dsadd</b>, tapez ce qui suit &agrave; l'invite de commandes ou dans un fichier de commandes&nbsp;:</p>
+	  <p>
+	  <strong>dsadd group</strong> &lt;DN_Groupe&gt; [-scope {l | g | u}] [-desc &lt;Description&gt;] [-memberof &lt;Groupe ...&gt;] [-members &lt;Membre ...&gt;] </p>
+	
+<p>Si vous ne sp&eacute;cifiez pas l'&eacute;tendue, le param&egrave;tre par d&eacute;faut est g (globale). Pour afficher la syntaxe compl&egrave;te de cette commande, tapez <b>dsadd group /?</b> &agrave; l'invite de commandes. Utilisez la syntaxe &quot; &quot; pour les variables comportant des espaces.</p>
+<p>	L'exemple suivant illustre l'ajout d'un compte de groupe de domaine local nomm&eacute; <strong>HR Files Read Only</strong> &agrave; l'unit&eacute; d'organisation RH.</p>
+<table width="560" border="0" cellpadding="0" cellspacing="0" bgcolor="E3E3E3">
+        <tr bgcolor="E3E3E3">
+          <td width="5" height="5"><img src="../../images/code/topLeft.gif" width="5" height="5"></td>
+          <td height="5"><img src="../../images/trans.gif" width="1" height="1"></td>
+          <td width="5" height="5"><img src="../../images/code/topRight.gif" width="5" height="5"></td>
+        </tr>
+        <tr bgcolor="E3E3E3">
+          <td width="5"><img src="../../images/trans.gif" width="1" height="1"></td>
+          <td><table width="100%" border="0" cellspacing="0" cellpadding="5" class="codetext"
+		>
+              <tr>
+                <td><p>dsadd group &quot;cn=HR Files Read,ou=HR,dc=contoso,dc=msft&quot; &ndash;scope L &ndash; desc &quot;HR Files Read Only, Boston, MA, USA&quot;<br>
+                  <br>
+                </p>
+              </td>
+              </tr>
+            </table>
+          </td>
+          <td width="5"><img src="../../images/trans.gif" width="1" height="1"></td>
+        </tr>
+        <tr bgcolor="E3E3E3">
+          <td width="5" height="5"><img src="../../images/code/bottomLeft.gif" width="5" height="5"></td>
+          <td height="5"><img src="../../images/trans.gif" width="1" height="1"></td>
+          <td width="5" height="5"><img src="../../images/code/bottomRight.gif" width="5" height="5"></td>
+        </tr>
+      </table>    
+    <p>L'exemple suivant comprend l'un des comptes de groupes que vous devez cr&eacute;er&nbsp;:</p>
+    <table width="560" border="0" cellpadding="0" cellspacing="0" bgcolor="E3E3E3">
+      <tr bgcolor="E3E3E3">
+        <td width="5" height="5"><img src="../../images/code/topLeft.gif" width="5" height="5"></td>
+        <td height="5"><img src="../../images/trans.gif" width="1" height="1"></td>
+        <td width="5" height="5"><img src="../../images/code/topRight.gif" width="5" height="5"></td>
+      </tr>
+      <tr bgcolor="E3E3E3">
+        <td width="5"><img src="../../images/trans.gif" width="1" height="1"></td>
+        <td><table width="100%" border="0" cellspacing="0" cellpadding="5" class="codetext"
+		>
+            <tr>
+              <td><p>dsadd group &quot;cn=G VAN Phone Reps,ou=CSO,dc=contoso,dc=msft&quot;<br>
+                </p>
+              </td>
+            </tr>
+          </table>
+        </td>
+        <td width="5"><img src="../../images/trans.gif" width="1" height="1"></td>
+      </tr>
+      <tr bgcolor="E3E3E3">
+        <td width="5" height="5"><img src="../../images/code/bottomLeft.gif" width="5" height="5"></td>
+        <td height="5"><img src="../../images/trans.gif" width="1" height="1"></td>
+        <td width="5" height="5"><img src="../../images/code/bottomRight.gif" width="5" height="5"></td>
+      </tr>
+    </table>
+    <p>Cette commande cr&eacute;e un groupe nomm&eacute; <strong>G VAN CSO Managers</strong>, y ajoute les membres <strong>Alice Ciccu</strong> et <strong>Min Su</strong> et ajoute ce groupe au groupe de domaine local <strong>L VAN CSO Files Modify</strong>. Avant d'ex&eacute;cuter le fichier, remplacez l'emplacement et le nom de domaine par les v&ocirc;tres&nbsp;:</p>
+    <table width="560" border="0" cellpadding="0" cellspacing="0" bgcolor="E3E3E3">
+      <tr bgcolor="E3E3E3">
+        <td width="5" height="5"><img src="../../images/code/topLeft.gif" width="5" height="5"></td>
+        <td height="5"><img src="../../images/trans.gif" width="1" height="1"></td>
+        <td width="5" height="5"><img src="../../images/code/topRight.gif" width="5" height="5"></td>
+      </tr>
+      <tr bgcolor="E3E3E3">
+        <td width="5"><img src="../../images/trans.gif" width="1" height="1"></td>
+        <td><table width="100%" border="0" cellspacing="0" cellpadding="5" class="codetext"
+		>
+            <tr>
+              <td><p>dsadd group &quot;cn=G VAN CSO Managers,ou=CSO,dc=contoso,dc=msft&quot; -memberof &quot; cn=L VAN CSO Files Modify,ou=CSO,dc=contoso,dc=msft&quot; -members &quot;cn=Alice Ciccu,ou=CSO,dc=contoso,dc=msft&quot; &quot;cn=Min Su,ou=CSO,dc=contoso,dc=msft&quot;<br>
+                </p>
+              </td>
+            </tr>
+          </table>
+        </td>
+        <td width="5"><img src="../../images/trans.gif" width="1" height="1"></td>
+      </tr>
+      <tr bgcolor="E3E3E3">
+        <td width="5" height="5"><img src="../../images/code/bottomLeft.gif" width="5" height="5"></td>
+        <td height="5"><img src="../../images/trans.gif" width="1" height="1"></td>
+        <td width="5" height="5"><img src="../../images/code/bottomRight.gif" width="5" height="5"></td>
+      </tr>
+    </table>    
+    </td>
+  </tr>
+</table>
+</body>
+</html>

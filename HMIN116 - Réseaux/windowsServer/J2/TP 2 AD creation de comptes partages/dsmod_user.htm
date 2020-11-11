@@ -1,0 +1,62 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>Utilisation de Dsmod pour modifier des comptes d'utilisateurs</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<link href="../../frame/microsoft_styles.css" rel="stylesheet" type="text/css">
+<SCRIPT src="../../js/clickTable.js" 
+type=text/javascript>
+</SCRIPT>
+<SCRIPT src="../../js/rollover.js" 
+type=text/javascript>
+</SCRIPT>
+<SCRIPT src="../../js/animation.js" 
+type=text/javascript>
+</SCRIPT>
+<SCRIPT src="../../js/rightMouseDis.js" 
+type=text/javascript>
+</SCRIPT>
+</head>
+
+<body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" onload="disableRightMouseclicks(); Initialize();">
+<table width="570" border="0" cellpadding="5" cellspacing="0" class="bodycopy">
+  <tr>
+    <td><p class="lessname">Utilisation de Dsmod pour modifier des comptes d'utilisateurs<br>
+      <img src="../../images/header_line.png" width="560" height="2"/></p>      
+
+      <p>Vous pouvez utiliser la commande <strong>dsmod</strong> pour modifier les attributs d'un ou plusieurs utilisateurs dans le service d'annuaire Active Directory. Pour modifier les attributs d'un compte d'utilisateur&nbsp;:</p>
+      <p>Pour modifier les attributs d'un compte d'utilisateur &agrave; l'aide de dsmod user, tapez ce qui suit &agrave; l'invite de commandes ou dans un fichier de commandes&nbsp;:</p>
+	  
+	  <p><strong>dsmod user</strong> DN_Utilisateur ... [-<strong>upn</strong> UPN] [-<strong>fn</strong> Pr&eacute;nom] [-<strong>mi</strong> Initiales] [-<strong>ln</strong>    Nom] [-<strong>display</strong> Nom_Affich&eacute;] [-<strong>pwd</strong> (Mot_passe | *)] [-<strong>tel</strong> Num&eacute;ro_T&eacute;l&eacute;phone] [-<strong>email</strong> Adresse_messagerie] [-<strong>fax</strong> Num&eacute;ro_T&eacute;l&eacute;copie] [-<strong>disabled</strong> {<strong>yes</strong> | <strong>no</strong>}] </p>
+	<p>Pour afficher la syntaxe compl&egrave;te de cette commande, tapez <b>dsmod user /?</b> &agrave; l'invite de commandes. Utilisez la syntaxe &quot; &quot; pour les variables comportant des espaces.</p>
+<p>L'exemple suivant permet de modifier le num&eacute;ro de t&eacute;l&eacute;copie de trois utilisateurs de l'organisation&nbsp;CSO&nbsp;(CSO, <i>Customer Services Organisation</i>)&nbsp;:</p>
+<table width="560" border="0" cellpadding="0" cellspacing="0" bgcolor="E3E3E3">
+        <tr bgcolor="E3E3E3">
+          <td width="5" height="5"><img src="../../images/code/topLeft.gif" width="5" height="5"></td>
+          <td height="5"><img src="../../images/trans.gif" width="1" height="1"></td>
+          <td width="5" height="5"><img src="../../images/code/topRight.gif" width="5" height="5"></td>
+        </tr>
+        <tr bgcolor="E3E3E3">
+          <td width="5"><img src="../../images/trans.gif" width="1" height="1"></td>
+          <td><table width="100%" border="0" cellspacing="0" cellpadding="5" class="codetext"
+		>
+              <tr>
+                <td><p>dsmod user &quot;cn=Jay Fluegel,ou=cso,dc=contoso,dc=msft&quot; &quot;cn=Jon Grande,ou=cso,dc=contoso,dc=msft&quot; &quot;cn=Alex Hankin,ou=cso,dc=contoso,dc=msft&quot; -fax &quot;555-555-1212&quot;<br>
+                </p>
+              </td>
+              </tr>
+            </table>
+          </td>
+          <td width="5"><img src="../../images/trans.gif" width="1" height="1"></td>
+        </tr>
+        <tr bgcolor="E3E3E3">
+          <td width="5" height="5"><img src="../../images/code/bottomLeft.gif" width="5" height="5"></td>
+          <td height="5"><img src="../../images/trans.gif" width="1" height="1"></td>
+          <td width="5" height="5"><img src="../../images/code/bottomRight.gif" width="5" height="5"></td>
+        </tr>
+      </table>    
+    </td>
+  </tr>
+</table>
+</body>
+</html>

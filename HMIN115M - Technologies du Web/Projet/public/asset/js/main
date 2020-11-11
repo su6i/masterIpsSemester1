@@ -1,0 +1,263 @@
+/**
+* Cours: Web Technologies
+* Project: MarmitUM
+* Authors: Hassina BOUFATIS, Aicha DERBAL and Amir SHIRALI POUR
+*/
+document.addEventListener('DOMContentLoaded', function() {
+
+  /**
+   * mtm library object
+   */
+  $mtm = {
+    /**
+     * return single dom element matched by the selector
+     */
+    getElement: function(selector) {
+      var element = document.querySelector(selector) || document.createElement('div');
+      return element;
+    },
+
+    /**
+     * return doms element matched by the selector
+     */
+    getElements: function(selector) {
+      return document.querySelectorAll(selector) || document.createElement('div');
+    },
+
+    /**
+     * ajax request method
+     */
+    ajax: function(options) {
+      var defaults = {
+        method: 'GET',
+        url: '/',
+        headers: {},
+        data: {},
+        success: function () {},
+        error: function () {},
+      };    
+
+      options = options || {}; 
+
+      // merge defaults with options
+      for (var prop in defaults) {
+        if (!options[prop]) {
+          options[prop] = defaults[prop];
+        }
+      }
+
+      // create xhr object
+      var xhr = new XMLHttpRequest();
+      xhr.open(options.method, options.url, true); 
+
+      // set request headers
+      options.headers['Content-Type'] = 'application/json';
+      for (var header in options.headers) {
+        xhr.setRequestHeader(header, options.headers[header]);
+      }
+
+      xhr.onload = function(e) {
+        e.preventDefault();
+        if (xhr.status  == 200) {
+          options.success(e, JSON.parse(xhr.responseText));  
+        } else {
+          options.error(e)
+        }
+      };
+
+      xhr.onerror = function(e) {
+        options.error(e)
+      }
+
+      if (options.method == 'GET') {
+        xhr.send();
+      } else {
+        xhr.send(JSON.stringify(options.data));
+      }
+    }
+
+  };
+  // mtm
+
+  // Event Handlers
+
+  // get recipe handler 
+  function handle_get_recipe(domEvent, target) {
+    var url = target.href;
+    $mtm.ajax({
+      method: 'GET',
+      url: url,
+      success: function (requestEvent, response) {
+       var recipe = response;
+       $mtm.getElement('#recipe_id').innerText = recipe.id;
+       $mtm.getElement('#recipe_date').innerText = recipe.date;
+       $mtm.getElement('#title').value = recipe.recipeTitle;
+       $mtm.getElement('#type').value = recipe.typeOfRecipe;
+       $mtm.getElement('#category').value = recipe.category;
+       $mtm.getElement('#prepare_time').value = recipe.timeOfPreparation;
+       $mtm.getElement('#for_persons').value = recipe.forPersons;
+       $mtm.getElement('#author').value = recipe.author;
+       $mtm.getElement('#email').value = recipe.email;
+       $mtm.getElement('#photo').value = recipe.photo;
+       $mtm.getElement('#ingredients').value = recipe.ingredients;
+      }
+    }) 
+  }
+
+
+  // delete recipe handler 
+  function handle_delete_recipe(domEvent, target) {
+    var are_yue_sure = confirm('Are you sure?');
+    if (!are_yue_sure) {
+      return;
+    }
+
+    var url = target.href;
+    $mtm.ajax({
+      method: 'DELETE',
+      url: url,
+      success: function (requestEvent, response) {
+        if (response && response.data) {
+          var recipes = response.data;
+          recreate_table(recipes);
+        }
+      }
+    });
+  }
+
+  function clear_form_handler(e) {
+    e.preventDefault();
+    clear_form();
+  }
+
+  function clear_form() {
+    $mtm.getElement('#recipe_id').innerText = '';
+    $mtm.getElement('#recipe_date').innerText = '';
+    $mtm.getElement('#title').value = '';
+    $mtm.getElement('#type').value = '';
+    $mtm.getElement('#category').value = '';
+    $mtm.getElement('#prepare_time').value = '';
+    $mtm.getElement('#for_persons').value = '';
+    $mtm.getElement('#author').value = '';
+    $mtm.getElement('#email').value = '';
+    $mtm.getElement('#photo').value = '';
+    $mtm.getElement('#ingredients').value = '';
+  }
+
+  function recreate_table(recipes) {
+    var table_body = $mtm.getElement("#recipes_table tbody");
+
+
+    var output = '';
+    for (var i = 0; i < recipes.length; i++) {
+      output += '<tr>';
+      output += '<th>' + (i + 1) + '</th>';
+      output += '<td>' + recipes[i]['recipeTitle'] + '</td>';
+      output += '<td>' + recipes[i]['author'] + '</td>';
+      output += '<td>' + recipes[i]['date'] + '</td>';
+      output += '<td>' + recipes[i]['category'] + '</td>';
+      output += '<td>';
+      output += '<div class="d-flex justify-content-between align-items-center">';
+      output += '  <div class="btn-group">';
+      output += '    <a href="/api/recipe/' + recipes[i]['id'] + '" type="button" class="btn btn-sm btn-outline-secondary" data-action="edit">';
+      output += 'Edit';
+      output += '     </a>';
+      output += '     <a href="/api/recipe/' + recipes[i]['id'] + '" type="button" class="btn btn-sm btn-outline-secondary" data-action="delete">';
+      output += 'Delete';
+      output += '     </a>';
+      output += '</div>';
+      output += '</td>';
+      output += '</tr>';
+    }
+    // if there is a table body element in the page, remove it first
+    if (table_body) {
+      table_body.parentNode.removeChild(table_body);
+    }   
+
+    var tbody = document.createElement('tbody');
+    tbody.innerHTML = output;
+    $mtm.getElement("#recipes_table").appendChild(tbody);   
+  }
+
+  function add_edit_form_handler(e) {
+    e.preventDefault();
+
+    var data = {
+      "date": $mtm.getElement('#recipe_date').innerText,
+      "title": $mtm.getElement('#title').value,
+      "type": $mtm.getElement('#type').value,
+      "category": $mtm.getElement('#category').value,
+      "prepare_time": $mtm.getElement('#prepare_time').value,
+      "for_persons": $mtm.getElement('#for_persons').value,
+      "author": $mtm.getElement('#author').value,
+      "email": $mtm.getElement('#email').value,
+      "photo": $mtm.getElement('#photo').value,
+      "ingredients": $mtm.getElement('#ingredients').value,
+    };
+
+    // by defualt http method is POST
+    var _method_ = 'POST';
+    var _url_ = '/api/recipe';
+
+    var _id_ = $mtm.getElement('#recipe_id').innerText;
+    // type casting to boolean : !!expression converts expression to boolean
+    if (!!_id_) {
+      // if there is an id, http method is set to PUT
+      _method_ = 'PUT';
+      _url_ = _url_ + '/' + _id_;
+      data["id"] = _id_;
+    }
+
+    $mtm.ajax({
+      method: _method_ ,
+      url: _url_, 
+      data: data,
+      success: function (requestEvent, response) {
+        if (response && response.data) {
+          var recipes = response.data;
+          recreate_table(recipes);
+          clear_form(); 
+        }
+      }
+    });
+
+  }
+
+  function load_data_btn_handler(e) {
+    e.preventDefault();
+
+    $mtm.ajax({
+      'url': '/api/recipes',
+      'method': 'GET',
+      success: function (requestEvent, response) {
+          var recipes = response;
+          recreate_table(recipes);
+      }
+    });
+  }
+
+  // Events
+  $mtm.getElement('#recipes_table')
+    .addEventListener('click', function (e) {
+      e.preventDefault();
+      var target = e.target;
+      if (target.tagName == 'A') {
+        if (target.dataset.action == 'edit') {
+          handle_get_recipe(e, target);
+        }
+
+        if (target.dataset.action == 'delete') {
+          handle_delete_recipe(e, target);
+        }
+      }
+    });
+
+
+  $mtm.getElement('#clear_btn').addEventListener('click', clear_form_handler);
+  $mtm.getElement('#add_edit_btn').addEventListener('click', add_edit_form_handler);
+  $mtm.getElement('#load_data_btn').addEventListener('click', load_data_btn_handler);
+  
+    
+
+  });
+

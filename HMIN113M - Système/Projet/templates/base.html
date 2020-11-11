@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://getbootstrap.com/docs/4.4/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+
+    <title>Finance with Python</title>
+
+    <!-- This is from split page seperator -->
+    <meta charset="UTF-8">
+    <script src="https://cdn.rawgit.com/lingtalfi/simpledrag/master/simpledrag.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- This is from split page seperator -->
+
+    <!-- Old menu elements -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/w3.css') }}">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- End of Old menu elements -->
+    
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="https://code.jquery.com/jquery-3.4.1.min.js><\/script>')</script>
+    <script src="https://getbootstrap.com/docs/4.4/dist/js/bootstrap.bundle.min.js" integrity="sha384-6khuMg9gaYr5AxOqhkVIODVIvm9ynTT5J4V1cfthmT+emCG6yVmEZsRHdxlotUnm" crossorigin="anonymous">   </script>
+    <!-- Scripts -->
+    
+    <!-- multiselect autocomplete -->
+<link rel="stylesheet" href="{{ url_for('static', filename='css/select2.min.css') }}">
+    <!-- multiselect autocomplete -->
+
+    <style type="text/css">
+
+        main > .container {
+            margin: 0;
+            padding: 60px 15px 0;
+          }
+
+          .footer {
+            background-color: #612e2e;
+            text-align: center;
+          }
+
+          .footer > .container {
+            padding-right: 15px;
+            padding-left: 15px;
+          }
+
+          code {
+            font-size: 80%;
+          }
+
+
+        html, body {
+            height: 100%;
+        }
+
+        .panes-container {
+            display: flex;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .left-pane {
+            width: 50%;
+            background: #ccc;
+            height: 50vh;
+            margin-left: 30px;
+
+        }
+
+        .panes-separator {
+            width: 0.2%;
+            background: red;
+            position: relative;
+            cursor: col-resize;
+        }
+
+        .right-pane {
+            flex: auto;
+            background: #eee;
+            height: 50vh;
+
+        }
+
+        .panes-container,
+        .left-pane,
+        .right-pane {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+          }
+
+          .khaneh {
+            padding-left: 10px;
+          }
+
+          @media screen (min-width: 768px) {
+
+            .left-pane, .right-pane {
+                height: 100vh;
+            }
+            .bd-placeholder-img-lg {
+              font-size: 3.5rem;
+            }
+          }
+
+    </style>
+    <!-- The end of seperator  -->
+</head>
+<body class="d-flex flex-column h-100">
+
+    <header>
+        <!-- Fixed navbar -->
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="{{ url_for('home') }}">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('finance') }}">Company list</a>
+              </li>
+                <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('online') }}">Plot-Data Frames</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('about') }}">About</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+
+
+      </header>
+
+
+
+
+    <div class="panes-container no-gutters">
+
+    <!-- <div class="row no-gutters"> -->
+
+        <div class="left-pane" id="left-pane" style="background-color:#f3f3f3;">
+
+        <!-- <div class="col-md-6 no-gutters">
+            <div class="leftside d-flex justify-content-center align-items-center">
+                leftside
+            </div>
+
+        </div> -->
+
+
+    {% block content_left %} {% endblock %}
+    </div>
+        <div class="panes-separator " id="panes-separator"></div>
+        <div class="right-pane no-gutters" id="right-pane" style="background-color:black; color:white; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;overflow-y:scroll;padding:65px 0 20px 20px;">
+
+        <!-- <div class="col-md-6 no-gutters">
+            <div class="rightside d-flex justify-content-center align-items-center">
+                rightside
+            </div>
+        </div> -->
+    {% block content_right %}
+    {% endblock %}
+        </div>
+    </div>
+
+    <footer class="footer mt-auto py-3">
+        <div class="container">
+          <span class="text-white">Finance with Python 
+            {% if lastUpdate is defined %}
+            | Last update: {{ lastUpdate }}
+            {% endif %}
+            | Author: Amir SHIRALI POUR | Professor: Pierre Pompidor </span>
+        </div>
+      </footer>
+      <script  src="{{url_for('static', filename='js/slider.js')}}"></script>
+
+    
+    <script  src="{{url_for('static', filename='js/select2.min.js')}}"></script>
+    <script  src="{{url_for('static', filename='js/multiselect.js')}}"></script>
+
+    {% block script %}
+
+
+
+      {% endblock %}
+
+
+
+      </body>
+      </html>

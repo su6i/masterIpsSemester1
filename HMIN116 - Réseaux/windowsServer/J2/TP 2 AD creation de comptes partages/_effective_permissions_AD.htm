@@ -1,0 +1,60 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>Comment v&eacute;rifier les autorisations effectives pour g&eacute;rer un objet Active Directory</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<link href="../../frame/microsoft_styles.css" rel="stylesheet" type="text/css">
+<SCRIPT src="../../js/clickTable.js" 
+type=text/javascript>
+</SCRIPT>
+<SCRIPT src="../../js/rollover.js" 
+type=text/javascript>
+</SCRIPT>
+<SCRIPT src="../../js/animation.js" 
+type=text/javascript>
+</SCRIPT>
+<SCRIPT src="../../js/rightMouseDis.js" 
+type=text/javascript>
+</SCRIPT>
+</head>
+
+<body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" onload="disableRightMouseclicks(); Initialize();">
+<table width="570" border="0" cellpadding="5" cellspacing="0" class="bodycopy">
+  <tr>
+    <td><p class="lessname">Comment v&eacute;rifier les autorisations effectives pour g&eacute;rer un objet Active Directory<br>
+      <img src="../../images/header_line.png" width="560" height="2"/></p>      
+	<p class="topicheader" >D&eacute;finition des autorisations effectives</p>
+      <p>Les autorisations effectives pour un objet du service d'annuaire Active Directory regroupent les autorisations Active Directory accord&eacute;es aux comptes d'utilisateurs et aux comptes de groupes.<br>
+        Vous pouvez utiliser l'outil Autorisations effectives pour d&eacute;terminer les autorisations pour un objet Active Directory. Cet outil calcule les autorisations accord&eacute;es &agrave; un utilisateur ou &agrave; un groupe sp&eacute;cifique et tient compte des autorisations r&eacute;sultant de l'adh&eacute;sion &agrave; un groupe ainsi que des autorisations h&eacute;rit&eacute;es des objets parents.<br>
+        Pour r&eacute;cup&eacute;rer les informations relatives aux autorisations effectives dans Active Directory, vous devez &ecirc;tre autoris&eacute; &agrave; lire les informations d'appartenance.<br>
+        La d&eacute;monstration suivante montre comment v&eacute;rifier les autorisations effectives accord&eacute;es pour g&eacute;rer un objet Active Directory.<br>
+      </p>
+      <table cellspacing="0" cellpadding="0" width="*" border="0"
+height="*">
+        <tr>
+          <td colspan="2" height="10" background="../../images/dotted_line.gif" width="*"></td>
+        </tr>
+        <tr>
+          <td width="39" valign="top" align="left"><img src="../../images/icons/Icons_Notes.jpg" width="32" height="30"/></td>
+          <td width="*">
+            <p><font class="bodyText"><b class="notehead">Remarque&nbsp;:</b> <span class="notetext">cette d&eacute;monstration utilise l'option Fonctionnalit&eacute;s avanc&eacute;es de Utilisateurs et ordinateurs Active Directory. Pour activer cette option, dans le menu Affichage de Utilisateurs et ordinateurs Active Directory, cliquez sur Fonctionnalit&eacute;s avanc&eacute;es.</span></font></p>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2" height="10" background="../../images/dotted_line.gif" width="*"></td>
+        </tr>
+      </table>
+	  <br>
+	  <div align="center"><img src="../../images/ss_02_01.jpg" width="449" height="337" alt="" border="0"></div>
+	  <ol>
+	  		<li> Dans Utilisateurs et ordinateurs Active Directory, cliquez avec le bouton droit sur une unit&eacute; d'organisation ou un objet compte, puis cliquez sur <b>Propri&eacute;t&eacute;s</b>.</li>
+			<li> Sous l'onglet <b>S&eacute;curit&eacute;</b> de la bo&icirc;te de dialogue <b>Propri&eacute;t&eacute;s</b>, cliquez sur <b>Avanc&eacute;</b>. </li>
+			<li> Sous l'onglet <b>Autorisations effectives</b> de la bo&icirc;te de dialogue <b>Param&egrave;tres de s&eacute;curit&eacute; avanc&eacute;s</b>, cliquez sur <b>S&eacute;lectionner</b>. </li>
+			<li> Dans la zone <b>Entrez le nom de l'objet &agrave; s&eacute;lectionner</b> de la bo&icirc;te de dialogue <b>S&eacute;lectionnez Utilisateur, Ordinateur ou Groupe</b>, tapez le nom d'un utilisateur ou d'un groupe, puis cliquez sur <b>OK</b>. </li>
+	  </ol>
+	  <p>Les cases &agrave; cocher activ&eacute;es indiquent les autorisations effectives sur l'objet accord&eacute;es &agrave; l'utilisateur ou au groupe s&eacute;lectionn&eacute;.</p>
+      </td>
+  </tr>
+</table>
+</body>
+</html>

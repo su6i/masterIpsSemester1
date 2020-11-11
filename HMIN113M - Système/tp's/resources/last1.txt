@@ -1,0 +1,7 @@
+amir.shirali-pour@etu.umontpelli tty7         :0               Tue Nov  5 10:04    gone - no logout
+eric.bourreau@umontpellier.fr tty7         :0               Tue Nov  5 09:53 - 10:02  (00:08)
+reboot   system boot  4.15.0-66-generic Tue Nov  5 04:00   still running
+alaric.hunot-martin@etu.umontpel tty7         :0               Mon Nov  4 15:04 - 16:39  (01:35)
+jihene.bouhlel@etu.umontpellier. tty7         :0               Mon Nov  4 13:31 - 14:26  (00:54)
+
+wtmp commence Mon Nov  4 13:31:52 2019

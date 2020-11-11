@@ -1,0 +1,61 @@
+Désolé pour les fautes de langue!
+
+on nous a donné 4 réseaux:
+	1) 10.25.16.0/22		
+	2) 10.96.16.0/20
+	3) 10.100.100.4/30
+	4) 10.100.100.8/30
+
+Dans Conventions, il a dit:
+	- Pour les interfaces FastEthernet du routeur Ra, ils ont la dernière adresse IP disponible sur le sous réseau
+	- Pour les interfaces Sérials de Ra, ils ont la plus petite adresse disponible des sous réseaux
+
+Tout d'abord il faut trouver les IP disponibles dans chaque réseau,
+1) 10.25.16.0/22
+/22 ça veut dire 22 premiers bits de 32 bits totals des bits d'une adresse IP ont appartient à la partie réseau d'une adresse IP
+N.B: chaque adresse IP à deux parties, partie réseau et partie host.
+
+Donc 22 ème bits est dans 3ème octet de l'adresse IP (chaque adresse IP a 4 octet, 4*8=32 bits)
+On peut reécrire les deux derniers octet de 10.25.16.0 en binaire comme ça:
+00010000.00000000	, dans 2 octets premier on avait déjà 16 bits, et alors 22ème bit ça sera 000100   00.00000000  (j'ai mis un éspace entre les deux partie, après la partie réseau)
+Maintenant pour avoir la dernière adresse disponible demandé, il faut trouver l'adresse de broadcast, et pour trouver l'adresse de broadcast, on met 1 binaire dans la partie host de l'adresse IP.
+On aura 000100   11.11111111
+Si on le convertir à decimal, on aura 19.255, donc l'adresse complète de broadcast ça sera 10.25.19.255, et alors la dernière adresse disponible ça sera une adresse avant de cette adresse, ça veut dire Ra FastEthernet0/1: 10.25.19.254
+Pour avoir mask en decimal pointé, il faut mettre 1 binaire dans la partie réseaux et 0 dans la partie host, donc on a 22 bits dans la partie réseau (22 bits de la valeur 1, et 10 bits de la valeur 0)
+11111111.11111111.11111100.00000000, ça nous donne 255.255.252.0
+et en fin notre adresse complète ça fait comme ça:
+	FastEthernet0/1: 10.25.19.254 mask 255.255.252.0
+
+avec la même façon on aura:
+2) 10.96.16.0/20	10.96.31.255 (broadcast) et alors une adresse avant ça ça sera la dernière adresse disponible, 10.96.31.254
+pour le subnet mask on aura 20 bits de 1 et 12 bit de 0:
+	11111111.11111111.11110000.00000000 qui nous donne 255.255.240.0
+notre adresse complète ça sera:
+	FastEthernet0/0: 10.96.31.254 mask 255.255.240.0
+
+3) 10.100.100.4/30
+Pour numéro 3 on nous a demandé:
+	- Pour les interfaces Sérials de Ra, ils ont la plus petite adresse disponible des sous réseaux
+Donc la réponse simple ça sera une adresse après l'adresse de réseau qu'il nous a donné, ça veut dire 10.100.100.5
+
+Mais encore Just for your information:
+/30 ça veut dire 30ème bit de l'adresse IP, donc ça sera dans le quatrième octet, et donc on doit écrire le quatrième octet en binaire: 00000100
+et si on sépart les 30 bits de réseau ça sera 000001   00, et si on met 1 dans la partie host, ça nous donne l'adresse broadcast: 00000111, en decimal ça sera 7, et l'adresse broadcast complète en decimal ça fait 10.100.100.7, une adresse avant de cette adresse ça fait la dernière adresse disponible de ce réseau 10.100.100.6 (ça veut dire dans /30 on a seulment deux IP adresse disponible, dans ce cas ils sont 10.100.100.5 et 10.100.100.6)
+la première adresse disponible est une IP après l'adresse de résseau (qui est 10.100.100.4) et alors:
+la première adresse disponible: 10.100.100.5
+pour le subnet mask on aura 30 bits de 1 et 2 bit de 0:
+11111111.11111111.11111111.11111100, ça nous donne 255.255.255.252
+
+4) 10.100.100.8/30
+Pour numéro 4 aussi, pareillment, on nous a demandé:
+	- Pour les interfaces Sérials de Ra, ils ont la plus petite adresse disponible des sous réseaux
+Donc la réponse simple ça sera une adresse après l'adresse de réseau qu'il nous a donné, ça veut dire 10.100.100.9
+
+Mais encore Just for your information:
+/30 ça veut dire 30ème bit de l'adresse IP, donc ça sera dans le quatrième octet, et donc on doit écrire le quatrième octet en binaire: 00001000
+et si on sépart les 30 bits de réseau ça sera 000010   00, et si on met 1 dans la partie host, ça nous donne l'adresse broadcast: 00001011, en decimal ça sera 11, et l'adresse broadcast complète en decimal ça fait 10.100.100.11, une adresse avant de cette adresse ça fait la dernière adresse disponible de ce réseau 10.100.100.10 (ça veut dire dans /30 on a seulment deux IP adresse disponible, dans ce cas ils sont 10.100.100.9 et 10.100.100.10)
+la première adresse disponible est une IP après l'adresse de résseau (qui est 10.100.100.8) et alors:
+la première adresse disponible: 10.100.100.9
+pour le subnet mask on aura 30 bits de 1 et 2 bit de 0:
+11111111.11111111.11111111.11111100, ça nous donne 255.255.255.252
+

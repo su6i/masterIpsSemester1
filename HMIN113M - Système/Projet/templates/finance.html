@@ -1,0 +1,110 @@
+{% extends "base.html" %}
+
+
+{% block content_left %}
+
+<div class="container">
+
+  <div class="finance">
+    <h1>Search for a share ticker</h1>
+    <form action="{{ url_for('finance') }}" method="POST">
+
+    <fieldset>
+        <legend>Data reader:</legend>
+        <table>
+          <tr>
+            <td><input type="radio" name="reader" value="wikipedia"   id="wikipedia" checked><label for="wikipedia">Wikipedia</label> </td>
+          </tr>
+
+            <tr>
+              <td><input type="radio" name="reader" value="offline"  id="offline"><label for="offline">Offline {% if lastUpdate is defined %}
+                (Last update: {{ lastUpdate }} )
+                {% endif %} </label> </td>
+            </tr>
+        </table>
+    </fieldset>
+
+    <fieldset>
+        <legend>Serialization method:</legend>
+        <table class="serialization">
+            <tr>
+                <td><input type="radio" name="serializations" value="pickle"  id="pickle">      <label for="pickle">Pickle    </label> </td>
+                <td><input type="radio" name="serializations" value="json"    id="json" checked><label for="json">JSON        </label> </td>
+                </tr>
+                <tr>
+                    <td> <input type="radio" name="serializations" value="sqlite"  id="sqlite" disabled>     <label for="sqlite">SQLite </label> </td>
+                    <td><input type="radio" name="serializations" value="mysql"   id="mysql" disabled>       <label for="mysql">MySQL   </label>  </td>
+                </tr>
+        </table>
+    </fieldset>
+
+    <fieldset>
+        <legend>Stock markets:</legend>
+        <table class="markets">
+            <tr>
+                <td><input type="checkbox" name="markets" value="sp500"   id="sp500">
+                  <label for="sp500">S&P500 </label> </td>
+                <td><input type="checkbox" name="markets" value="nasdaq"  id="nasdaq" disabled>       <label for="nasdaq">Nasdaq</label> </td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="markets" value="cac40"   id="cac40">        <label for="cac40">CAC40  </label> </td>
+                    <td><input type="checkbox" name="markets" value="tehran"  id="tehran" disabled checked>       <label for="tehran">Tehran</label> </td>
+                </tr>
+        </table>
+    </fieldset>
+
+    <fieldset>
+        <legend>Share's ticker:</legend>
+        <table>
+            <tr>
+
+            <div class="input-group mb-3">
+              <select  class="js-example-basic-multiple" style="width:400px" name="tickers" multiple></select>
+
+              <div class="input-group-append">
+
+                <button class="btn btn-outline-secondary" type="submit">Search</button>
+              </div>
+
+
+          </div>
+
+            </tr>
+        </table>
+    </fieldset>
+    </form>
+
+  </div>
+
+</div>
+
+
+{% endblock %}
+
+
+{% block content_right %}
+
+    <div id="result">
+
+    {% if tickers is defined and tickers is not none %}
+      <dl>
+      {% for ticker in tickers %}
+        {% for key, value in ticker.items() %}
+          <dt>- {{ key|e }}</dt>
+          <dt style="padding-left:20px;">{{ value|e }}</dt>
+          {% endfor %}
+          <br/>
+      {% endfor %}
+      </dl>
+      {% endif %}
+
+    </div>
+
+
+{% endblock %}
+
+
+{% block script %}
+
+
+  {% endblock %}

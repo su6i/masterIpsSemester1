@@ -1,0 +1,10 @@
+dsmod user "cn=etudiant1,ou=etudiants,dc=local,dc=intra" -pwd P@ssword -disabled no 
+dsmod user "cn=etudiant2,ou=etudiants,dc=local,dc=intra" -pwd P@ssword -disabled no 
+dsmod user "cn=etudiant3,ou=etudiants,dc=local,dc=intra" -pwd P@ssword -disabled no 
+dsmod user "cn=etudiant4,ou=etudiants,dc=local,dc=intra" -pwd P@ssword -disabled no 
+dsmod user "cn=etudiant5,ou=etudiants,dc=local,dc=intra" -pwd P@ssword -disabled no
+dsmod user "cn=etudiant6,ou=etudiants,dc=local,dc=intra" -pwd P@ssword -disabled no
+dsmod user "cn=etudiant7,ou=etudiants,dc=local,dc=intra" -pwd P@ssword -disabled no
+dsmod user "cn=etudiant8,ou=etudiants,dc=local,dc=intra" -pwd P@ssword -disabled no
+dsmod user "cn=etudiant9,ou=etudiants,dc=local,dc=intra" -pwd P@ssword -disabled no
+dsmod user "cn=etudiant10,ou=etudiants,dc=local,dc=intra" -pwd P@ssword -disabled no

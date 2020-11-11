@@ -1,0 +1,4 @@
+dsadd computer "cn=PC1,ou=ordinateurs,dc=local,dc=intra" -desc "1er PC"
+dsadd computer "cn=PC2,ou=ordinateurs,dc=local,dc=intra" -desc "2éme PC"
+dsadd computer "cn=PC3,ou=ordinateurs,dc=local,dc=intra" -desc "3éme PC" 
+dsadd computer "cn=PC4,ou=ordinateurs,dc=local,dc=intra" -desc "4éme PC"

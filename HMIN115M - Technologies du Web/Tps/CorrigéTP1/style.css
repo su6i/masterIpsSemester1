@@ -1,0 +1,21 @@
+h1 {
+	color: pink;
+}
+
+h2 {
+	font-family: Trebuchet;
+	font-style: italic;
+}
+
+li {
+	display: inline;
+}
+
+img {
+	width: 400px;
+}
+
+tbody tr:nth-of-type(odd) td {
+	background-color: grey;
+}
+

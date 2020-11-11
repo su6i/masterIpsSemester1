@@ -1,0 +1,88 @@
+package tp3_2019;
+
+public class Lettre extends ObjetPostal{
+	/***************************************************************************************************/
+	//-----------------2    Eléments de base de la classe Lettre----------/
+	/***************************************************************************************************/
+	//Question 4 Créez une sous-classe Lettre de la classe ObjetPostal.
+	//	—  Introduisez dans la classe Lettre un attribut pour représenter le fait qu’une lettre peutˆetre urgente ou ordinaire.
+
+	private boolean urgente;
+	private TauxRec tauxRecommandation;
+
+	
+	/***************************************************************************************************/
+	/************************************ Partie Constructeurs *****************************************/
+	//	—  Munissez la classe Lettre de tous les accesseurs et constructeurs qui vous semblent pertinents.
+
+	public Lettre() {
+		
+
+	}
+	
+	
+	public Lettre(String origine, String destination, int codePostal, double poids, 
+			double volume, TauxRec tauxRecommandation, boolean urgente) {
+		super(origine, destination, codePostal, poids, volume, tauxRecommandation);
+		this.urgente = urgente;
+
+	}
+
+	/******************************************Partie Accesseurs ***************************************/
+
+	public boolean getUrgente() {
+		return this.urgente;
+	}
+	
+	public void setUrgente(boolean urgente) {
+		this.urgente = urgente;		
+	}
+
+	//	Question 4 —  Ecrivez une méthode String toString() qui retourne une chaîne comprenant tous lesattributs de manière `a connaître l’état d’un objet.
+	@Override
+	public String toString() {
+		if (this.urgente)
+			return super.toString()+" type: urgente";
+		else
+			return super.toString()+" type: ordinaire";
+	}
+
+//	4 - Tarif d’affranchissement
+	// -  0.30 euro si c’est une lettre urgente.
+	@Override
+	public double tarifAffranchissement() {
+		double prixBase = 0.0;
+		double addRate = 0.0;
+		if (this.urgente) {
+			addRate = 0.3;
+		}
+		prixBase +=addRate;
+		return super.tarifAffranchissement()+prixBase;
+	}// fin de tarifAffranchissement()
+
+
+	@Override
+	public double tarifRemboursement() {
+		double tarifRemboursement = 0.0;
+		if (this.getTauxRecommandation().equals(tauxRecommandation.moyen)) tarifRemboursement = 1.5; // Two ways are equal
+			
+		
+		else if (this.getTauxRecommandation()==tauxRecommandation.fort) { 	 // Two ways are equal
+			tarifRemboursement = 15;
+
+		
+		return tarifRemboursement;
+	}
+
+
+	@Override
+	public double tarifBase() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	
+	
+
+}//Lettre extends ObjetPostal()
+

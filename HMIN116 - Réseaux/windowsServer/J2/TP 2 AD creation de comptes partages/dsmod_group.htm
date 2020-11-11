@@ -1,0 +1,61 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>Utilisation de Dsmod pour ajouter des membres &agrave; un groupe</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<link href="../../frame/microsoft_styles.css" rel="stylesheet" type="text/css">
+<SCRIPT src="../../js/clickTable.js" 
+type=text/javascript>
+</SCRIPT>
+<SCRIPT src="../../js/rollover.js" 
+type=text/javascript>
+</SCRIPT>
+<SCRIPT src="../../js/animation.js" 
+type=text/javascript>
+</SCRIPT>
+<SCRIPT src="../../js/rightMouseDis.js" 
+type=text/javascript>
+</SCRIPT>
+</head>
+
+<body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" onload="disableRightMouseclicks(); Initialize();">
+<table width="570" border="0" cellpadding="5" cellspacing="0" class="bodycopy">
+  <tr>
+    <td><p class="lessname">Utilisation de Dsmod pour ajouter des membres &agrave; un groupe<br>
+      <img src="../../images/header_line.png" width="560" height="2"/></p>      
+
+      <p>Vous pouvez utiliser la commande <b>dsmod</b> pour modifier des groupes dans le service d'annuaire Active Directory. Pour ajouter des membres &agrave; un groupe dans Active Directory &agrave; l'aide de <b>dsmod group</b>, tapez ce qui suit &agrave; l'invite de commandes ou dans un fichier de commandes&nbsp;:</p>
+      
+	  <p> <strong>dsmod group</strong> DN_Groupe ... [-<strong>samid</strong> Nom_SAM] [-<strong>desc</strong> Description] [-<strong>secgrp</strong>    {yes | no}] [-<strong>scope</strong> {l | g | u}] [{-<strong>addmbr</strong> | -<strong>rmmbr</strong> | -<strong>chmbr</strong>} DN_Membre ...] [{-<strong>s</strong> Serveur | -<strong>d</strong> Domaine}] [-<strong>u</strong> Nom_Utilisateur] [-<strong>p</strong> {Mot_passe | *}] [-<strong>c</strong>] [-<strong>q</strong>] [{-<strong>uc</strong>    | -<strong>uco</strong> | -<strong>uci</strong>}] </p>
+	<p>Pour afficher la syntaxe compl&egrave;te de cette commande, tapez <b>dsmod group /?</b> &agrave; l'invite de commandes. Utilisez la syntaxe &quot; &quot; pour les variables comportant des espaces.</p>
+<p>L'exemple suivant permet d'ajouter deux utilisateurs au groupe CSO Managers &agrave; l'aide de <strong>dsmod group</strong>&nbsp;:</p>
+<table width="560" border="0" cellpadding="0" cellspacing="0" bgcolor="E3E3E3">
+        <tr bgcolor="E3E3E3">
+          <td width="5" height="5"><img src="../../images/code/topLeft.gif" width="5" height="5"></td>
+          <td height="5"><img src="../../images/trans.gif" width="1" height="1"></td>
+          <td width="5" height="5"><img src="../../images/code/topRight.gif" width="5" height="5"></td>
+        </tr>
+        <tr bgcolor="E3E3E3">
+          <td width="5"><img src="../../images/trans.gif" width="1" height="1"></td>
+          <td><table width="100%" border="0" cellspacing="0" cellpadding="5" class="codetext"
+		>
+              <tr>
+                <td><p>dsmod group &quot;cn=G GLA CSO Managers,CN=Utilisateurs,dc=contoso,dc=msft&quot; -addmbr &quot;cn=Alice Ciccu,cn=Utilisateurs,dc=contoso,dc=msft&quot; &quot;cn=Min Su,cn=Utilisateurs,dc=contoso,dc=msft&quot;<br>
+                </p>
+              </td>
+              </tr>
+            </table>
+          </td>
+          <td width="5"><img src="../../images/trans.gif" width="1" height="1"></td>
+        </tr>
+        <tr bgcolor="E3E3E3">
+          <td width="5" height="5"><img src="../../images/code/bottomLeft.gif" width="5" height="5"></td>
+          <td height="5"><img src="../../images/trans.gif" width="1" height="1"></td>
+          <td width="5" height="5"><img src="../../images/code/bottomRight.gif" width="5" height="5"></td>
+        </tr>
+      </table>    
+    </td>
+  </tr>
+</table>
+</body>
+</html>
