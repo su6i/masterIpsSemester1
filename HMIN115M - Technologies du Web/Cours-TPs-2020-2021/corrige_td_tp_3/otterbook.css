@@ -1,0 +1,55 @@
+/* Feuille de style pour Otterbook */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+header {
+    background-color: #405D9A;
+    height: 64px;
+    text-align: right;
+    color: white;
+}
+
+#logo {
+    font-weight: bold;
+    font-size: 35px;
+    padding-top: 10px;
+    margin-left: 20px;
+    float: left;
+}
+
+
+#profil img {
+    width: 400px;
+}
+
+#description label {
+    font-weight: bold;
+    display: inline-block;
+    width: 80px;
+}
+
+/* Flex */
+
+#container {
+    padding: 10px 40px 0 40px;
+    display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: flex-start;
+	align-content: stretch;
+}
+
+.bloc {
+    /* border: solid red 1px; */
+    flex-grow: 1;
+    width: 400px;
+    padding: 10px;
+    min-height: 120px;
+}
+
+/* Media-queries */
