@@ -9,6 +9,16 @@ This is the final project of `Operating System - Python` course, first semester 
     - Amir SHIRALI POUR
 
 ----------------------------------------------------------------------------
+Some photo examples:
+
+https://github.com/su6i/masterIpsSemester1/edit/master/HMIN113M%20-%20Système/Projet/README.md
+
+![FaceBook](/HMIN113M%20-%20Système/Projet/static/resources/pic/fb.png)
+![Google](/HMIN113M%20-%20Système/Projet/static/resources/pic/google.png)
+![Microsoft](/HMIN113M%20-%20Système/Projet/static/resources/pic/msft.png)
+![ADBE](/HMIN113M%20-%20Système/Projet/static/resources/pic/adbe.png)
+
+----------------------------------------------------------------------------
 ### Thanks to my professors and this project I learned to:
 
 1- How to create resizeable div (body part of html).   
