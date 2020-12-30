@@ -31,3 +31,4 @@
 `insert ignore into lieu(codeInsee, nomCom, longitude, latitude) select codeinsee, nom_com, longitude, latitude from commune;` -- insert data but ignore if already exists that data
 
 `update lieu set dep = SUBSTR(code_insee, 1, 2);` -- set a part of a value in a column from another column
+`update lieu_backup set dep = SUBSTR(code_insee, 1, 3) where code_insee like '97%';` -- set a part of a value in a column from another column with a condition

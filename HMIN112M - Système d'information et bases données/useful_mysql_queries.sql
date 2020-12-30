@@ -15,3 +15,15 @@ insert ignore into lieu(codeInsee, nomCom, longitude, latitude)
 select codeinsee, nom_com, longitude, latitude from commune;        -- insert data but ignore if already exists that data
 mysqldump -uUsername -pPassword project_generated >  project_generated.sql -- dump (export) an entire database to a file
 update lieu set dep = SUBSTR(code_insee, 1, 2);                     -- set a part of a value in a column from another column
+update lieu_backup set dep = SUBSTR(code_insee, 1, 3) where code_insee like '97%'; -- set a part of a value in a column from another column with a condition
+update departement g set chef_lieu = (select chefLieu from project_initial.departement i where g.num_dep = i.chefLieu);
+insert ignore into monument(code_m, latitude, longitude, nom_m, proprietaire, type_monument, code_lieu) select codeM, longitude, latitude, nomM, proprietaire, typeMonument, codeLieu from project_initial.monument; 
+
+create table backup_programmation_java.departement select * from departement;
+create table backup_programmation_java.monument select * from monument;
+create table backup_programmation_java.lieu select * from lieu;
+create table backup_programmation_java.celebrite select * from celebrite;
+create table backup_programmation_java.monument_celebrite select * from monument_celebrite;
+create table backup_programmation_java.data select * from data;
+
+SELECT COUNT(*) FROM ( SELECT DISTINCT prenom, nom FROM celebrite);
