@@ -1,5 +1,5 @@
 # Finance with Python
-This is the final project of `Operating System - Python` course, first semester of master of Computer Science for Scientists, Montpellier University. 
+This is the final project of `Operating System - Python` course, first semester of master of Computer Science, Montpellier University. 
 - This project is hosted in my website at https://www.learnhow.ir
 
 ## Supervisor:
