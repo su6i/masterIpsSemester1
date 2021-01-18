@@ -11,7 +11,6 @@ This is the final project of `Operating System - Python` course, first semester 
 ----------------------------------------------------------------------------
 Some photo examples:
 
-https://github.com/su6i/masterIpsSemester1/edit/master/HMIN113M%20-%20Système/Projet/README.md
 
 ![FaceBook](/HMIN113M%20-%20Système/Projet/static/resources/pic/fb.png)
 ![Google](/HMIN113M%20-%20Système/Projet/static/resources/pic/google.png)
